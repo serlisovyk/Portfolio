@@ -27,9 +27,3 @@ https://serhii-lisovyk-portfolio.netlify.app/
 
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="40" height="40" alt="Git" />
 </p>
-
-# How to copy
-
-<p align="left">git clone https://github.com/serlisovyk/Portfolio.git</p>
-<p align="left">npm i</p>
-<p align="left">npm run dev</p>
