@@ -1,1 +1,1 @@
-export { default as ThemingProvider } from './theming.provider'
+export { default as Providers } from './providers'

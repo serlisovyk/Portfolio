@@ -39,10 +39,10 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none transition cursor-pointer select-none rounded-none first:rounded-l-md last:rounded-r-md',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none transition cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md',
               activeLanguage
-                ? 'bg-secondary text-white shadow'
-                : 'bg-transparent hover:bg-slate-700/60',
+                ? 'bg-secondary text-white shadow transition-all duration-300'
+                : 'bg-transparent hover:bg-slate-700/20 transition-all duration-300',
             ].join(' ')}
           >
             {label}

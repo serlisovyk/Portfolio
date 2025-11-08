@@ -4,6 +4,15 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "language-switcher": "Language switcher"
+    "language-switcher": "Language switcher",
+    "toggle-theme": "Theme toggle",
+    "greating": "Hello I’am Serhii Lisovyk.",
+    "intro-topic": "I’m a front-end developer with one year of hands-on experience. At a European company, I built modern, high-performing sites for automotive dealerships. I love crafting clean UX with Next.js, React and TypeScript.",
+    "address": "Dnipro / Ukraine",
+    "profile-photo": "My profile photo",
+    "my": "My",
+    "skills": "Skills",
+    "show-more": "Show more",
+    "show-less": "Show less"
   }
 }

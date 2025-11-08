@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { hasLocale } from 'next-intl'
 import { Inter } from 'next/font/google'
 import { routing } from '@/shared/i18n'
-import { ThemingProvider } from '@/shared/providers'
+import { Providers } from '@/shared/providers'
 import { RootLayoutProps } from '@/shared/types'
 import Header from '@/widgets/header'
 import './globals.css'
@@ -27,14 +27,12 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={currentLocale} suppressHydrationWarning>
       <body className={`${interSans.variable} antialiased`}>
-        <NextIntlClientProvider>
-          <ThemingProvider>
-            <div className="container mx-auto overflow-hidden min-h-full">
-              <Header />
-              <main>{children}</main>
-            </div>
-          </ThemingProvider>
-        </NextIntlClientProvider>
+        <Providers>
+          <div className="container mx-auto px-4 overflow-hidden min-h-full">
+            <Header />
+            <main>{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   )

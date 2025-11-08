@@ -9,11 +9,14 @@ export default function HeaderNavigation() {
 
   return (
     <nav>
-      <ul className="flex items-center gap-5">
-        {HEADER_NAV_LINKS.map((link) => (
-          <li key={link}>
-            <Link href="#!" className="transition-colors hover:opacity-80">
-              {t(link)}
+      <ul className="flex items-center gap-3 sm:gap-5">
+        {HEADER_NAV_LINKS.map(({ text, href }) => (
+          <li key={text}>
+            <Link
+              href={href}
+              className="whitespace-nowrap transition-opacity hover:opacity-80"
+            >
+              {t(text)}
             </Link>
           </li>
         ))}
