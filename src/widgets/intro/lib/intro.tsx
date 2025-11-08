@@ -42,6 +42,7 @@ export default function Intro() {
             height={500}
             loading="eager"
             className="rounded-full"
+            fetchPriority="high"
           />
         </div>
       </div>
