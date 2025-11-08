@@ -1,4 +1,4 @@
-import { LOCALES } from '@/shared/i18n/constants'
+import { LOCALES } from '@/shared/i18n'
 
 export const LANGUAGE_SWITCHER_OPTIONS = [
   { code: LOCALES.EN, label: 'EN' },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { Inter } from 'next/font/google'
-import { routing } from '@/shared/i18n/routing'
+import { routing } from '@/shared/i18n'
 import { ThemingProvider } from '@/shared/providers'
 import { RootLayoutProps } from '@/shared/types'
 import Header from '@/widgets/header'

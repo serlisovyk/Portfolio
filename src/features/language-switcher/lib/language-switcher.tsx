@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl'
 import { useTransition } from 'react'
-import { usePathname, useRouter } from '@/shared/i18n/navigation'
+import { usePathname, useRouter } from '@/shared/i18n'
 import { setCookie, setLocalStorageItem } from '@/shared/utils'
 import { LANGUAGE_SWITCHER_OPTIONS } from './constants'
 
