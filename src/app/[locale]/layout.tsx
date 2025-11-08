@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { Inter } from 'next/font/google'
-import { routing } from '@/i18n/routing'
-import { ThemingProvider } from '@/providers'
-import { RootLayoutProps } from '@/types'
-import Header from '@/components/header'
+import { routing } from '@/shared/i18n/routing'
+import { ThemingProvider } from '@/shared/providers'
+import { RootLayoutProps } from '@/shared/types'
+import Header from '@/widgets/header'
 import './globals.css'
 
 const interSans = Inter({
