@@ -1,54 +1,49 @@
 'use client'
 
-import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from '@/i18n/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 import { useTransition } from 'react'
-
-const LOCALES = [
-  { code: 'en', label: 'EN' },
-  { code: 'uk', label: 'UA' },
-  { code: 'ru', label: 'RU' },
-]
+import { usePathname, useRouter } from '@/i18n/navigation'
+import { LANGUAGE_SWITCHER_OPTIONS } from '@/constants'
+import { setCookie, setLocalStorageItem } from '@/utils'
 
 export default function LanguageSwitcher() {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
+
+  const t = useTranslations('Home')
+
   const [isPending, startTransition] = useTransition()
 
-  const setLocale = (next: string) => {
+  const setLocale = (nextLocale: string) => {
     startTransition(() => {
-      router.replace({ pathname }, { locale: next })
-
-      globalThis.document.cookie = `NEXT_LOCALE=${next}; Path=/; Max-Age=31536000; SameSite=Lax`
-
-      try {
-        localStorage.setItem('locale', next) // чисто для твоих хуков/логики
-      } catch {}
+      router.replace({ pathname }, { locale: nextLocale })
+      setCookie(`NEXT_LOCALE=${nextLocale}; Path=/; Max-Age=31536000; SameSite=Lax`)
+      setLocalStorageItem('locale', nextLocale)
     })
   }
 
   return (
     <div
-      className="inline-flex items-center rounded-2xl border border-slate-700 bg-slate-800 p-1 shadow-sm"
+      className="inline-flex items-center bg-transparent shadow-sm rounded-md border border-slate-700 overflow-hidden"
       role="tablist"
-      aria-label="Language switcher"
+      aria-label={t('language-switcher')}
     >
-      {LOCALES.map(({ code, label }) => {
-        const active = code === locale
+      {LANGUAGE_SWITCHER_OPTIONS.map(({ code, label }) => {
+        const activeLanguage = code === locale
+
         return (
           <button
             key={code}
             role="tab"
-            aria-selected={active}
+            aria-selected={activeLanguage}
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3 py-1.5 text-sm font-semibold leading-none rounded-xl transition',
-              'focus:outline-none focus-visible:ring focus-visible:ring-blue-400/60',
-              active
-                ? 'bg-blue-500 text-white shadow'
-                : 'text-slate-200 hover:bg-slate-700/60',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none transition select-none rounded-none first:rounded-l-md last:rounded-r-md',
+              activeLanguage
+                ? 'bg-secondary text-white shadow'
+                : 'bg-transparent text-slate-200 hover:bg-slate-700/60',
             ].join(' ')}
           >
             {label}

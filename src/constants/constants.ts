@@ -6,3 +6,15 @@ export enum THEMES {
 export const THEME_STORAGE_KEY = 'theme'
 
 export const HEADER_NAV_LINKS = ['about', 'projects', 'experience', 'contact']
+
+export enum LOCALES {
+  EN = 'en',
+  UK = 'uk',
+  RU = 'ru',
+}
+
+export const LANGUAGE_SWITCHER_OPTIONS = [
+  { code: LOCALES.EN, label: 'EN' },
+  { code: LOCALES.UK, label: 'UA' },
+  { code: LOCALES.RU, label: 'RU' },
+]

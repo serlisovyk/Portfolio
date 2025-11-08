@@ -1,30 +1,12 @@
-'use client'
-
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { HEADER_NAV_LINKS } from '@/constants'
+import HeaderNavigation from '../header-navigation'
 import LanguageSwitcher from '../language-switcher'
-import dynamic from 'next/dynamic'
-
-const ThemeToggle = dynamic(() => import('../theme-toggle'), { ssr: false })
+import ThemeToggle from '../theme-toggle'
 
 export default function Header() {
-  const t = useTranslations('Home')
-
   return (
-    <header className="flex justify-between items-center gap-2 py-6">
-      <nav>
-        <ul className="flex items-center gap-5 pl-10">
-          {HEADER_NAV_LINKS.map((link) => (
-            <li key={link}>
-              <Link href="#!" className="transition-colors hover:opacity-80">
-                {t(link)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="flex items-center gap-5">
+    <header className="flex flex-col md:flex-row justify-between items-center gap-5 py-6 px-10">
+      <HeaderNavigation />
+      <div className="flex items-center gap-10">
         <LanguageSwitcher />
         <ThemeToggle />
       </div>
