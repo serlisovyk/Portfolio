@@ -40,10 +40,10 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none transition select-none rounded-none first:rounded-l-md last:rounded-r-md',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none transition cursor-pointer select-none rounded-none first:rounded-l-md last:rounded-r-md',
               activeLanguage
                 ? 'bg-secondary text-white shadow'
-                : 'bg-transparent text-slate-200 hover:bg-slate-700/60',
+                : 'bg-transparent hover:bg-slate-700/60',
             ].join(' ')}
           >
             {label}

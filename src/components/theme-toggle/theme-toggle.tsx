@@ -11,7 +11,6 @@ export default function ThemeToggle() {
 
   const [isMounted, setIsMounted] = useState(false)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setIsMounted(true)
   }, [])
@@ -23,7 +22,7 @@ export default function ThemeToggle() {
   const toggleTheme = () => setTheme(isDark ? THEMES.LIGHT : THEMES.DARK)
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} className="cursor-pointer">
       {isDark ? (
         <Sun size={30} color="#ffe102" />
       ) : (
