@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { useTransition } from 'react'
 import { usePathname, useRouter } from '@/shared/i18n'
-import { setCookie, setLocalStorageItem } from '@/shared/utils'
+import { setCookie } from '@/shared/utils'
 import { LANGUAGE_SWITCHER_OPTIONS } from './constants'
 
 export default function LanguageSwitcher() {
@@ -19,7 +19,6 @@ export default function LanguageSwitcher() {
     startTransition(() => {
       router.replace({ pathname }, { locale: nextLocale })
       setCookie(`NEXT_LOCALE=${nextLocale}; Path=/; Max-Age=31536000; SameSite=Lax`)
-      setLocalStorageItem('locale', nextLocale)
     })
   }
 

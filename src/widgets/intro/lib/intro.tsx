@@ -4,7 +4,7 @@ import { INTRO_TYPING_TEXTS } from './constants/intro.constants'
 
 export default function Intro() {
   return (
-    <section className="py-10">
+    <section className="py-30">
       <div className="flex flex-col md:flex-row justify-center items-center gap-30">
         <div className="text-5xl">
           <h1>Hello I’am Serhii Lisovyk.</h1>
