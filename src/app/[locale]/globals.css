@@ -8,7 +8,7 @@
 @theme {
   --color-primary: var(--primary);
   --color-primary-contrast: var(--primary-contrast);
-  --color-secondary: #2b7fff;
+  --color-secondary: #2466cb;
 }
 
 html[data-theme='dark'] {

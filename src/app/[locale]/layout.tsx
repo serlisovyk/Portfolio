@@ -5,6 +5,7 @@ import { routing } from '@/shared/i18n'
 import { Providers } from '@/shared/providers'
 import { RootLayoutProps } from '@/shared/types'
 import Header from '@/widgets/header'
+import Footer from '@/widgets/footer'
 import './globals.css'
 
 const interSans = Inter({
@@ -31,6 +32,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           <div className="container mx-auto px-4 overflow-hidden min-h-full">
             <Header />
             <main>{children}</main>
+            <Footer />
           </div>
         </Providers>
       </body>

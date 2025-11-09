@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
-import { SKILLS_ITEMS } from './constants'
 import { useTranslations } from 'next-intl'
+import { useState } from 'react'
+import Button from '@/shared/ui/button'
+import { SKILLS_ITEMS } from './constants'
 
 export default function Skills() {
   const t = useTranslations('Home')
@@ -34,14 +35,11 @@ export default function Skills() {
 
       {hasMore && (
         <div className="flex justify-center">
-          <button
-            type="button"
+          <Button
+            text={isExpanded ? t('show-less') : t('show-more')}
             onClick={toggleExpand}
-            aria-expanded={isExpanded}
-            className="inline-flex items-center gap-2 rounded-md border-2 border-secondary px-5 py-3 text-md cursor-pointer hover:bg-primary-contrast hover:text-primary transition-colors"
-          >
-            {isExpanded ? t('show-less') : t('show-more')}
-          </button>
+            AriaExpanded={isExpanded}
+          />
         </div>
       )}
     </section>
