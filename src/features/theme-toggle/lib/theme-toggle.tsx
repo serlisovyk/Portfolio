@@ -19,7 +19,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={t('toggle-theme')}
       aria-pressed={isDark}
-      className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full bg-primary-contrast/5 hover:bg-primary-contrast/20 active:bg-primary-contrast/30"
+      className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full bg-primary-contrast/5 hover:bg-primary-contrast/20 focus:bg-primary-contrast/20 active:bg-primary-contrast/30"
     >
       {isDark ? (
         <Sun

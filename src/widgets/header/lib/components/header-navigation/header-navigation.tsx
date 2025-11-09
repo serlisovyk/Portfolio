@@ -14,7 +14,7 @@ export default function HeaderNavigation() {
           <li key={text}>
             <Link
               href={href}
-              className="whitespace-nowrap transition-opacity hover:opacity-80"
+              className="whitespace-nowrap transition-colors hover:text-secondary focus:text-secondary focus:outline-none"
             >
               {t(text)}
             </Link>
