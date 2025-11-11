@@ -18,14 +18,14 @@ export default function Skills() {
 
   return (
     <section className="pb-30 mx-auto">
-      <h2 className="text-center text-4xl mb-10">
-        {t('my')} <span className="font-bold">{t('skills')}</span>
+      <h2 className="text-center text-2xl md:text-4xl font-bold mb-10">
+        {t('skills')}
       </h2>
       <div className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-40 w-full mb-10">
         {items.map(({ text, icon }) => (
           <div
             key={text}
-            className="flex flex-col items-center justify-center text-center gap-5 border-2 border-secondary rounded-sm p-5 w-46 h-46 cursor-default hover:text-primary hover:bg-primary-contrast transition-colors duration-300"
+            className="flex flex-col items-center justify-center text-center gap-5 border border-secondary rounded-sm p-5 w-46 h-46 cursor-default hover:text-primary hover:bg-primary-contrast transition-colors duration-300"
           >
             {icon}
             <span className="text-xl">{text}</span>

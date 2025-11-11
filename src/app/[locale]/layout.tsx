@@ -26,7 +26,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     : routing.defaultLocale
 
   return (
-    <html lang={currentLocale} suppressHydrationWarning>
+    <html lang={currentLocale} suppressHydrationWarning className="scroll-smooth">
       <body className={`${interSans.variable} antialiased`}>
         <Providers>
           <div className="container mx-auto px-4 overflow-hidden min-h-full">

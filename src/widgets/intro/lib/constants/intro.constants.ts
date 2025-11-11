@@ -1,7 +1,7 @@
 export const INTRO_TYPING_TEXTS = [
-  'Front-end developer.',
-  'React developer.',
-  'Javascript developer.',
-  'Full-stack developer.',
-  'Web developer.',
+  'Front-end Developer.',
+  'React Developer.',
+  'Javascript Developer.',
+  'Full-stack Developer.',
+  'Web Developer.',
 ]

@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import { HiOutlineMapPin } from 'react-icons/hi2'
 import Socials from '@/features/socials'
 import TextType from '@/shared/ui/text-type'
+import Button from '@/shared/ui/button'
 import { INTRO_TYPING_TEXTS } from './constants'
 
 export default function Intro() {
@@ -25,12 +26,16 @@ export default function Intro() {
             />
           </div>
           <p className="text-xl mb-4 sm:mb-8">{t('intro-topic')}</p>
-          <div className="flex flex-col md:flex-row justify-between gap-5">
+          <div className="flex flex-col md:flex-row justify-between gap-5 mb-4 sm:mb-8">
             <Socials />
             <div className="flex items-center gap-2">
               <HiOutlineMapPin size={28} />
               <span className="text-lg sm:text-xl">{t('address')}</span>
             </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button text={t('my-resume')} />
+            <Button text={t('detailed-about-me')} variant="secondary" />
           </div>
         </div>
         <div>
