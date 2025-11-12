@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-secondary text-center py-4">
+      <div className="border-t border-secondary text-center py-8">
         @{currentYear} {t('name-surname')}
       </div>
     </footer>

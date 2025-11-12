@@ -17,7 +17,7 @@ export default function Skills() {
   const hasMore = SKILLS_ITEMS.length > 8
 
   return (
-    <section className="pb-30 mx-auto">
+    <section className="pb-60 mx-auto">
       <h2 className="text-center text-2xl md:text-4xl font-bold mb-10">
         {t('skills')}
       </h2>
