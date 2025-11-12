@@ -19,7 +19,7 @@ export default function Skills() {
   return (
     <section className="pb-60 mx-auto">
       <h2 className="text-center text-2xl md:text-4xl font-bold mb-10">
-        {t('skills')}
+        <span className="font-normal">{t('my')}</span> {t('skills')}
       </h2>
       <div className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-40 w-full mb-10">
         {items.map(({ text, icon }) => (

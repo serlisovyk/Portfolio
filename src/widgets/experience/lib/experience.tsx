@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Tags from '@/shared/ui/tags'
 import { EXPERIENCE_ITEMS } from './constants'
 
 export default function Experience() {
   return (
-    <section id="experience" className="pb-50">
+    <section id="experience" className="pb-40">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">
           Experience
@@ -67,16 +68,7 @@ export default function Experience() {
 
                 <p className="text-base leading-relaxed md:text-lg">{item.text}</p>
 
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {item.technologies.map((technology) => (
-                    <span
-                      key={technology}
-                      className="cursor-default rounded-full bg-secondary px-3 py-1.5 text-sm text-white md:text-base"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
+                <Tags items={item.technologies} />
               </div>
             </li>
           ))}

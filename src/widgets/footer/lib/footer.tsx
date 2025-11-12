@@ -9,8 +9,8 @@ export default function Footer() {
 
   return (
     <footer id="contact">
-      <div className="mb-8 md:mb-20 pl-0 md:pl-10">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+      <div className="pb-40 flex flex-col justify-center items-center text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4">
           {t('lets')} <span className="font-normal">{t('talk')}</span> {t('for')}
           <br />
           {t('something-special')}
