@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
   const router = useRouter()
   const pathname = usePathname()
 
-  const t = useTranslations('Home')
+  const t = useTranslations('common')
 
   const [isPending, startTransition] = useTransition()
 

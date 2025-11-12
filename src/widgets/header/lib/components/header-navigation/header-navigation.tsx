@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { HEADER_NAV_LINKS } from '../../constants'
 
 export default function HeaderNavigation() {
-  const t = useTranslations('Home')
+  const t = useTranslations('common')
 
   return (
     <nav>

@@ -6,7 +6,7 @@ import Button from '@/shared/ui/button'
 import { SKILLS_ITEMS } from './constants'
 
 export default function Skills() {
-  const t = useTranslations('Home')
+  const t = useTranslations('common')
 
   const [isExpanded, setIsExpanded] = useState(false)
 

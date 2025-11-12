@@ -6,9 +6,10 @@ import { FiSun as Sun, FiMoon as Moon } from 'react-icons/fi'
 import { THEMES } from './constants'
 
 export default function ThemeToggle() {
-  const t = useTranslations('Home')
+  const t = useTranslations('common')
 
   const { theme, setTheme, resolvedTheme } = useTheme()
+
   const isDark = (theme ?? resolvedTheme) === THEMES.DARK
 
   const toggleTheme = () => setTheme(isDark ? THEMES.LIGHT : THEMES.DARK)

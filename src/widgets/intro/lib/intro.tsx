@@ -7,14 +7,14 @@ import Button from '@/shared/ui/button'
 import { INTRO_TYPING_TEXTS } from './constants'
 
 export default function Intro() {
-  const t = useTranslations('Home')
+  const t = useTranslations('common')
 
   return (
     <section className="pt-10 pb-30 md:pt-30 md:pb-45 lg:pb-60">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10 xl:gap-30">
         <div className="max-w-xl">
           <div className="text-3xl sm:text-5xl leading-snug mb-4 sm:mb-6">
-            <h1>{t('greating')}</h1>
+            <h1>{t('greeting')}</h1>
             <TextType
               text={INTRO_TYPING_TEXTS}
               typingSpeed={75}
@@ -42,11 +42,10 @@ export default function Intro() {
           <Image
             src="/profile.jpg"
             alt={t('profile-photo')}
-            title={t('profile-photo')}
             width={500}
             height={500}
-            loading="eager"
             className="rounded-full"
+            loading="eager"
             fetchPriority="high"
           />
         </div>
