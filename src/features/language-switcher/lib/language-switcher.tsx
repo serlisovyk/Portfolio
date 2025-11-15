@@ -39,10 +39,10 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none transition cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md',
               activeLanguage
-                ? 'bg-secondary text-white shadow focus:bg-primary-contrast focus:text-primary focus:outline-none transition-all duration-300'
-                : 'bg-transparent hover:bg-slate-700/20 focus:bg-primary-contrast focus:text-primary focus:outline-none transition-all duration-300',
+                ? 'bg-accent text-white shadow hover:bg-accent/70 focus:bg-accent/70'
+                : 'bg-transparent hover:bg-primary-contrast/10 focus:bg-primary-contrast/10',
             ].join(' ')}
           >
             {label}

@@ -1,7 +1,7 @@
 export const HEADER_NAV_LINKS = [
   {
     text: 'about',
-    href: '/about',
+    href: '#about',
   },
   {
     text: 'projects',

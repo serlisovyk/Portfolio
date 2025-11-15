@@ -25,7 +25,7 @@ export default function Skills() {
         {items.map(({ text, icon }) => (
           <div
             key={text}
-            className="flex flex-col items-center justify-center text-center gap-5 border border-secondary rounded-sm p-5 w-46 h-46 cursor-default hover:text-primary hover:bg-primary-contrast transition-colors duration-300"
+            className="flex flex-col items-center justify-center text-center gap-5 rounded-md border border-accent/30 p-5 w-46 h-46 cursor-default hover:text-primary hover:bg-primary-contrast transition-colors duration-300"
           >
             {icon}
             <span className="text-xl">{text}</span>

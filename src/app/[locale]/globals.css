@@ -3,12 +3,17 @@
 :root {
   --primary: #ededed;
   --primary-contrast: #171717;
+  --accent: #7c3aed;
+  --accent-2: #2b7fff;
+  --glow: #9d4edd;
 }
 
 @theme {
   --color-primary: var(--primary);
   --color-primary-contrast: var(--primary-contrast);
-  --color-secondary: #2466cb;
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-glow: var(--glow);
 }
 
 html[data-theme='dark'] {

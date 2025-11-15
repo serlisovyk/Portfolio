@@ -14,9 +14,13 @@ export default function HeaderNavigation() {
           <li key={text}>
             <Link
               href={href}
-              className="whitespace-nowrap transition-colors hover:text-secondary focus:text-secondary focus:outline-none"
+              className="group relative inline-block whitespace-nowrap hover:text-accent focus-visible:text-accent focus-visible:outline-none transition duration-300"
             >
               {t(text)}
+              <span
+                aria-hidden
+                className="absolute left-0 -bottom-0.5 h-0.5 w-full bg-accent origin-left scale-x-0 transition-transform duration-400 group-hover:scale-x-100 group-focus-visible:scale-x-100"
+              />
             </Link>
           </li>
         ))}

@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-secondary text-center py-8">
+      <div className="border-t border-accent text-center py-8">
         &copy;<time dateTime={String(currentYear)}>{currentYear}</time>{' '}
         {t('name-surname')}
       </div>

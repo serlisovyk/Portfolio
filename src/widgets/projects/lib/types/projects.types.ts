@@ -1,11 +1,11 @@
 export interface Project {
   id: string
   title: string
-  excerpt: string
-  images: ProjectImage[]
+  text: string
+  image: ProjectImage
   tags: string[]
-  demo?: string
-  repo?: string
+  demo: string
+  repository: string
 }
 
 interface ProjectImage {
@@ -15,10 +15,4 @@ interface ProjectImage {
 
 export interface ProjectCardProps {
   project: Project
-  handleOpen: (p: Project) => void
-}
-
-export interface ProjectModalProps {
-  project: Project | null
-  onClose: () => void
 }

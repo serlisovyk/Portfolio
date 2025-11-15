@@ -16,7 +16,7 @@ export default function Experience() {
             <li key={item.id} className="md:flex md:items-stretch md:gap-8">
               <aside className="hidden w-48 shrink-0 md:block">
                 <div className="flex h-full flex-col items-end gap-3">
-                  <time className="mb-2 whitespace-nowrap text-lg text-[#2c7df8]">
+                  <time className="mb-2 whitespace-nowrap text-lg text-accent-2">
                     {item.time}
                   </time>
 
@@ -37,7 +37,7 @@ export default function Experience() {
               </aside>
 
               <div className="relative hidden h-full w-8 shrink-0 md:block">
-                <div className="absolute inset-y-0 left-1/2 w-px h-100 -translate-x-1/2 dark:bg-zinc-800" />
+                <div className="absolute inset-y-0 left-1/2 w-px h-100 -translate-x-1/2 bg-accent-2" />
                 <span className="absolute left-1/2 top-5 h-6 w-6 -translate-x-1/2 rounded-full bg-current ring-6 ring-primary" />
               </div>
 
@@ -45,7 +45,7 @@ export default function Experience() {
                 <span className="absolute left-0 top-1 h-6 w-6 -translate-x-1/2 rounded-full bg-current ring-6 ring-primary md:hidden" />
 
                 <div className="mb-3 flex items-center gap-5 md:hidden">
-                  <time className="whitespace-nowrap text-[#2c7df8]">
+                  <time className="whitespace-nowrap text-accent-2">
                     {item.time}
                   </time>
 
@@ -62,7 +62,7 @@ export default function Experience() {
                   {item.role}
                 </h3>
 
-                <div className="mb-3 whitespace-nowrap text-secondary text-xl">
+                <div className="mb-3 whitespace-nowrap text-accent-2 text-xl">
                   {item.state}
                 </div>
 

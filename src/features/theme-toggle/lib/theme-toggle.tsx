@@ -23,17 +23,9 @@ export default function ThemeToggle() {
       className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full bg-primary-contrast/5 hover:bg-primary-contrast/20 focus:bg-primary-contrast/20 active:bg-primary-contrast/30"
     >
       {isDark ? (
-        <Sun
-          size={24}
-          className="transition-transform duration-150 group-active:scale-95"
-          color="#ffe102"
-        />
+        <Sun size={24} className="group-active:scale-95" color="#ffe102" />
       ) : (
-        <Moon
-          size={24}
-          className="transition-transform duration-150 group-active:scale-95"
-          color="#2b7fff"
-        />
+        <Moon size={24} className="group-active:scale-95" color="#2b7fff" />
       )}
     </button>
   )

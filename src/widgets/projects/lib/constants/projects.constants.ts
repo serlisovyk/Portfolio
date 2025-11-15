@@ -2,55 +2,45 @@ import { Project } from '../types'
 
 export const PROJECTS: Project[] = [
   {
-    id: 'kindergarten',
-    title: 'Сайт дитячого садка',
-    excerpt:
-      'Адаптивний сайт на WordPress для приватного дитсадка. Кастомізація теми, зручна адмінпанель і SEO.',
-    images: [
-      { src: '/test-image.png', alt: 'Головна сторінка' },
-      { src: '/test-image.png', alt: 'Галерея фото' },
-      { src: '/test-image.png', alt: 'Сторінка блогу' },
+    id: '1',
+    title: 'Quotes',
+    text: 'quotes-text',
+    image: {
+      src: '/pet-projects/quotes.png',
+      alt: 'quotes-image-alt',
+    },
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind',
+      'Tanstack Query',
+      'Jest',
+      'Node.js',
+      'Express.js',
+      'Sequelize',
     ],
-    tags: ['WordPress', 'HTML', 'CSS', 'SEO'],
-    demo: 'https://example.com/demo',
+    demo: 'soon',
+    repository: 'https://github.com/serlisovyk/Quotes',
   },
   {
-    id: 'kindergarten',
-    title: 'Сайт дитячого садка',
-    excerpt:
-      'Адаптивний сайт на WordPress для приватного дитсадка. Кастомізація теми, зручна адмінпанель і SEO.',
-    images: [
-      { src: '/test-image.png', alt: 'Головна сторінка' },
-      { src: '/test-image.png', alt: 'Галерея фото' },
-      { src: '/test-image.png', alt: 'Сторінка блогу' },
+    id: '2',
+    title: 'Pizza',
+    text: 'pizza-text',
+    image: {
+      src: '/pet-projects/pizza.png',
+      alt: 'pizza-image-alt',
+    },
+    tags: [
+      'React',
+      'TypeScript',
+      'Redux Toolkit',
+      'React Router',
+      'Sass',
+      'Express.js',
+      'MongoDB',
     ],
-    tags: ['WordPress', 'HTML', 'CSS', 'SEO'],
-    demo: 'https://example.com/demo',
-  },
-  {
-    id: 'kindergarten',
-    title: 'Сайт дитячого садка',
-    excerpt:
-      'Адаптивний сайт на WordPress для приватного дитсадка. Кастомізація теми, зручна адмінпанель і SEO.',
-    images: [
-      { src: '/test-image.png', alt: 'Головна сторінка' },
-      { src: '/test-image.png', alt: 'Галерея фото' },
-      { src: '/test-image.png', alt: 'Сторінка блогу' },
-    ],
-    tags: ['WordPress', 'HTML', 'CSS', 'SEO'],
-    demo: 'https://example.com/demo',
-  },
-  {
-    id: 'kindergarten',
-    title: 'Сайт дитячого садка',
-    excerpt:
-      'Адаптивний сайт на WordPress для приватного дитсадка. Кастомізація теми, зручна адмінпанель і SEO.',
-    images: [
-      { src: '/test-image.png', alt: 'Головна сторінка' },
-      { src: '/test-image.png', alt: 'Галерея фото' },
-      { src: '/test-image.png', alt: 'Сторінка блогу' },
-    ],
-    tags: ['WordPress', 'HTML', 'CSS', 'SEO'],
-    demo: 'https://example.com/demo',
+    demo: 'soon',
+    repository: 'https://github.com/serlisovyk/Pizza',
   },
 ]

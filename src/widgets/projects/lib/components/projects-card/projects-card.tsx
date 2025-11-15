@@ -1,38 +1,61 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import Tags from '@/shared/ui/tags'
-import Button from '@/shared/ui/button'
 import { ProjectCardProps } from '../../types'
 
-export default function ProjectCard({ project, handleOpen }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const t = useTranslations('common')
+
   return (
-    <article
-      onClick={() => handleOpen(project)}
-      className="group relative flex flex-col rounded-xl border border-zinc-200 bg-zinc-50/40 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/40"
-    >
-      <div className="overflow-hidden rounded-lg">
+    <article className="flex flex-col rounded-2xl h-full border border-accent/30 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div className="rounded-xl mb-4">
         <Image
-          src={project.images[0].src}
-          alt={project.images[0].alt}
-          width={520}
-          height={180}
-          className="h-44 w-full object-cover transition group-hover:scale-[1.02]"
+          src={project.image.src}
+          alt={t(project.image.alt)}
+          width={960}
+          height={320}
+          className="aspect-video h-80 object-cover rounded-md"
         />
       </div>
 
-      <h3 className="mt-4 text-xl md:text-2xl font-semibold text-primary-contrast">
-        {project.title}
-      </h3>
+      <div className="flex flex-1 flex-col">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 text-accent-2">
+          {project.title}
+        </h3>
 
-      <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-300">
-        {project.excerpt}
-      </p>
+        <p className="mb-3">{t(project.text)}</p>
 
-      <Tags items={project.tags} />
+        <div className="mt-auto pt-4">
+          <Tags items={project.tags} />
 
-      <div className="mt-5 flex gap-3">
-        <Button text="Детальніше" onClick={() => handleOpen(project)} />
+          <div className="flex items-center gap-3 mt-6">
+            {project.repository && (
+              <Link
+                href={project.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md text-primary-contrast hover:text-white border border-accent hover:bg-accent transition duration-300"
+              >
+                GitHub
+              </Link>
+            )}
+            {project.demo === 'soon' ? (
+              <span>{t('project-demo-soon')}</span>
+            ) : (
+              <Link
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-md text-primary-contrast hover:text-white border border-accent hover:bg-accent transition duration-300"
+              >
+                Demo
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </article>
   )

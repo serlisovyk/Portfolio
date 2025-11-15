@@ -22,7 +22,7 @@ export default function Intro() {
               showCursor={true}
               as="span"
               cursorCharacter="|"
-              className="text-secondary"
+              className="bg-linear-to-r from-accent via-glow to-accent-2 bg-clip-text text-transparent"
             />
           </div>
           <p className="text-xl mb-4 sm:mb-8">{t('intro-topic')}</p>

@@ -9,10 +9,9 @@ export default function Button({
   className = '',
 }: ButtonProps) {
   const buttonVariant = {
-    primary:
-      'hover:bg-primary-contrast focus:bg-primary-contrast hover:text-primary focus:text-primary',
+    primary: 'bg-accent hover:shadow-glow hover:translate-y-[-1px]',
     secondary:
-      'bg-secondary text-white hover:bg-primary focus:bg-primary hover:text-primary-contrast focus:text-primary-contrast',
+      'bg-accent-2 bg-linear-to-r from-accent to-accent2 text-accentContrast hover:translate-y-[-1px] hover:bg-accent/10',
   }
 
   return (
@@ -20,7 +19,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       aria-expanded={AriaExpanded}
-      className={`${buttonVariant[variant]} ${className} inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 cursor-pointer border border-secondary focus:outline-none transition-colors duration-300`}
+      className={`${buttonVariant[variant]} ${className} inline-flex text-white border-accent/40 items-center justify-center gap-2 rounded-md px-5 py-3 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus:outline-none focus-visible:ring-accent/60 transition duration-300`}
     >
       {text}
     </button>
