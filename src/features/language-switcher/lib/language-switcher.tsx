@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center bg-transparent shadow-sm rounded-md border border-slate-700 overflow-hidden"
+      className="inline-flex items-center rounded-md border border-outline bg-surface/70 text-foreground overflow-hidden shadow-sm"
       role="tablist"
       aria-label={t('language-switcher')}
     >
@@ -39,10 +39,10 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40',
               activeLanguage
-                ? 'bg-accent text-white shadow hover:bg-accent/70 focus:bg-accent/70'
-                : 'bg-transparent hover:bg-primary-contrast/10 focus:bg-primary-contrast/10',
+                ? 'btn-gradient text-white hover:opacity-80'
+                : 'bg-transparent hover:bg-surface/70 hover:text-foreground',
             ].join(' ')}
           >
             {label}

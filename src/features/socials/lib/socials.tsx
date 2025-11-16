@@ -11,7 +11,7 @@ export default function Socials() {
           title={item.title}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center border border-primary-contrast rounded-sm p-4 hover:bg-primary-contrast focus:bg-primary-contrast hover:text-primary focus:text-primary hover:scale-[1.2] focus:scale-[1.2] focus:outline-none transition duration-300"
+          className="flex items-center justify-center rounded-sm border border-outline bg-surface/70 p-4 text-foreground hover:border-primary hover:bg-surface focus-visible:border-primary focus-visible:bg-surface hover:text-primary focus-visible:text-primary hover:scale-[1.05] focus-visible:scale-[1.05] focus-visible:outline-none transition duration-300"
         >
           {item.icon}
         </Link>

@@ -1,10 +1,17 @@
+'use client'
+
 import LanguageSwitcher from '@/features/language-switcher'
-import ThemeToggle from '@/features/theme-toggle'
 import HeaderNavigation from './components/header-navigation'
+import dynamic from 'next/dynamic'
+
+const ThemeToggle = dynamic(() => import('@/features/theme-toggle'), {
+  ssr: false,
+  loading: () => <button aria-hidden className="h-12 w-12" />,
+})
 
 export default function Header() {
   return (
-    <header className="flex flex-col md:flex-row justify-between items-center gap-5 p-4 sm:py-6 sm:px-10">
+    <header className="flex w-full flex-col md:flex-row justify-between items-center gap-5 p-4 sm:py-6 sm:px-10 bg-background/90 text-foreground border-b border-outline/70">
       <HeaderNavigation />
       <div className="flex items-center gap-10">
         <LanguageSwitcher />

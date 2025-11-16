@@ -4,8 +4,6 @@ import { Inter } from 'next/font/google'
 import { routing } from '@/shared/i18n'
 import { Providers } from '@/shared/providers'
 import { RootLayoutProps } from '@/shared/types'
-import Header from '@/widgets/header'
-import Footer from '@/widgets/footer'
 import './globals.css'
 
 const interSans = Inter({
@@ -31,11 +29,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={currentLocale} suppressHydrationWarning className="scroll-smooth">
       <body className={`${interSans.variable} antialiased`}>
         <Providers>
-          <div className="container mx-auto px-4 overflow-hidden min-h-full">
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </div>
+          <div className="overflow-hidden min-h-full">{children}</div>
         </Providers>
       </body>
     </html>

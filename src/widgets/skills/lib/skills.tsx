@@ -17,18 +17,18 @@ export default function Skills() {
   const hasMore = SKILLS_ITEMS.length > 8
 
   return (
-    <section className="pb-60 mx-auto">
+    <section id="skills" className="pb-60 mx-auto text-foreground">
       <h2 className="text-center text-2xl md:text-4xl font-bold mb-10">
         <span className="font-normal">{t('my')}</span> {t('skills')}
       </h2>
-      <div className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-40 w-full mb-10">
+      <div className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-20 w-full mb-10">
         {items.map(({ text, icon }) => (
           <div
             key={text}
-            className="flex flex-col items-center justify-center text-center gap-5 rounded-md border border-accent/30 p-5 w-46 h-46 cursor-default hover:text-primary hover:bg-primary-contrast transition-colors duration-300"
+            className="flex flex-col items-center justify-center text-center gap-5 rounded-md border border-outline bg-surface p-5 w-46 h-46 cursor-default hover:border-primary hover:bg-surface/80 transition-colors duration-300"
           >
             {icon}
-            <span className="text-xl">{text}</span>
+            <span className="text-xl text-muted">{text}</span>
           </div>
         ))}
       </div>

@@ -19,13 +19,12 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={t('toggle-theme')}
-      aria-pressed={isDark}
-      className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full bg-primary-contrast/5 hover:bg-primary-contrast/20 focus:bg-primary-contrast/20 active:bg-primary-contrast/30"
+      className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full border border-outline bg-surface text-foreground hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 transition-colors duration-300"
     >
       {isDark ? (
-        <Sun size={24} className="group-active:scale-95" color="#ffe102" />
+        <Sun size={24} className="group-active:scale-95 text-accent" />
       ) : (
-        <Moon size={24} className="group-active:scale-95" color="#2b7fff" />
+        <Moon size={24} className="group-active:scale-95 text-accent" />
       )}
     </button>
   )

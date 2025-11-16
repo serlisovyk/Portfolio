@@ -8,14 +8,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer id="contact">
+    <footer id="contact" className="text-foreground">
       <div className="pb-40 flex flex-col justify-center items-center text-center">
         <h2 className="text-2xl md:text-4xl font-bold mb-4">
           {t('lets')} <span className="font-normal">{t('talk')}</span> {t('for')}
           <br />
           {t('something-special')}
         </h2>
-        <p className="max-w-lg text-lg md:text-xl mb-4">{t('footer-topic')}</p>
+        <p className="max-w-lg text-lg md:text-xl mb-4 text-muted">{t('footer-topic')}</p>
         <div className="flex flex-col gap-4">
           <Socials />
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-accent text-center py-8">
+      <div className="border-t border-outline/80 text-center py-8 text-muted">
         &copy;<time dateTime={String(currentYear)}>{currentYear}</time>{' '}
         {t('name-surname')}
       </div>

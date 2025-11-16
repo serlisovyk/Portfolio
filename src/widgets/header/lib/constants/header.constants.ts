@@ -1,15 +1,15 @@
 export const HEADER_NAV_LINKS = [
   {
-    text: 'about',
-    href: '#about',
-  },
-  {
-    text: 'projects',
-    href: '#projects',
+    text: 'skills',
+    href: '#skills',
   },
   {
     text: 'experience',
     href: '#experience',
+  },
+  {
+    text: 'projects',
+    href: '#projects',
   },
   {
     text: 'contact',
