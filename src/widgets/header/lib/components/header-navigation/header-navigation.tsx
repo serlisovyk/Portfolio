@@ -14,7 +14,7 @@ export default function HeaderNavigation() {
           <li key={text}>
             <Link
               href={href}
-              className="group relative inline-block whitespace-nowrap text-muted hover:text-primary focus-visible:text-primary focus-visible:outline-none transition duration-300"
+              className="group relative inline-block whitespace-nowrap text-muted hover:text-primary focus-visible:text-primary focus-visible:outline-none theme-transition"
             >
               {t(text)}
               <span

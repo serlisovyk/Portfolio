@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-28 md:pt-32">
         <Intro />
         <Skills />
         <Experience />

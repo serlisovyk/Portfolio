@@ -10,7 +10,9 @@ export default function About() {
     <section id="about" className="pb-40 px-4 md:px-10">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-20 xl:gap-50">
         <div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">About me</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            About <span className="font-normal">me</span>
+          </h2>
           <p className="max-w-4xl text-lg md:text-xl text-muted mb-4">
             I’m a frontend developer who enjoys working at the intersection of design
             and engineering. I like shaping interfaces so they feel clear to users

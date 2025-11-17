@@ -84,3 +84,5 @@ export const SKILLS_ITEMS = [
     icon: <SiGraphql size={56} aria-hidden={true} />,
   },
 ]
+
+export const PREVIEW_COUNT = 8
