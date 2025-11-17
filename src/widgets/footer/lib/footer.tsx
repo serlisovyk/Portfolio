@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="text-foreground">
-      <div className="pb-40 flex flex-col justify-center items-center text-center">
+      <div className="pb-20 md:pb-40 flex flex-col justify-center items-center text-center">
         <h2 className="text-2xl md:text-4xl font-bold mb-4">
           {t('lets')} <span className="font-normal">{t('talk')}</span> {t('for')}
           <br />
@@ -20,7 +20,7 @@ export default function Footer() {
         </p>
         <div className="flex flex-col gap-4">
           <Socials />
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
             <Button text={t('my-resume')} />
             {/* <Button text={t('detailed-about-me')} variant="secondary" /> */}
           </div>

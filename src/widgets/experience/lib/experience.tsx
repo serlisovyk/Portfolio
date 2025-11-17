@@ -5,7 +5,7 @@ import { EXPERIENCE_ITEMS } from './constants'
 
 export default function Experience() {
   return (
-    <section id="experience" className="pb-40 text-foreground">
+    <section id="experience" className="pb-20 md:pb-40 text-foreground">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">
           Experience
