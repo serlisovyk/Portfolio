@@ -15,12 +15,14 @@ export default function Footer() {
           <br />
           {t('something-special')}
         </h2>
-        <p className="max-w-lg text-lg md:text-xl mb-4 text-muted">{t('footer-topic')}</p>
+        <p className="max-w-lg text-lg md:text-xl mb-4 text-muted">
+          {t('footer-topic')}
+        </p>
         <div className="flex flex-col gap-4">
           <Socials />
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Button text={t('my-resume')} />
-            <Button text={t('detailed-about-me')} variant="secondary" />
+            {/* <Button text={t('detailed-about-me')} variant="secondary" /> */}
           </div>
         </div>
       </div>

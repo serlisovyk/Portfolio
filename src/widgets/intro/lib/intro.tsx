@@ -35,7 +35,7 @@ export default function Intro() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button text={t('my-resume')} />
-            <Button text={t('detailed-about-me')} variant="secondary" />
+            {/* <Button text={t('detailed-about-me')} variant="secondary" /> */}
           </div>
         </div>
         <div>

@@ -9,7 +9,7 @@ export default function Button({
   className = '',
 }: ButtonProps) {
   const buttonVariant = {
-    primary: 'btn-gradient text-white hover:opacity-90',
+    primary: 'btn-gradient text-white hover:opacity-70',
     secondary:
       'bg-surface/90 text-foreground border border-outline hover:border-primary hover:text-primary',
   }
