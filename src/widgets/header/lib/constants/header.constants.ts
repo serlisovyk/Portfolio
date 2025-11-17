@@ -12,7 +12,7 @@ export const HEADER_NAV_LINKS = [
     href: '#projects',
   },
   {
-    text: 'contact',
-    href: '#contact',
+    text: 'about',
+    href: '#about',
   },
 ]

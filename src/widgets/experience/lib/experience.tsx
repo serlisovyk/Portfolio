@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import Tags from '@/shared/ui/tags'
 import { EXPERIENCE_ITEMS } from './constants'
 
 export default function Experience() {
+  const t = useTranslations('common')
+
   return (
-    <section id="experience" className="pb-20 md:pb-40 text-foreground">
+    <section id="experience" className="pb-40 text-foreground">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">
           Experience
@@ -63,7 +66,7 @@ export default function Experience() {
                 </div>
 
                 <p className="text-base leading-relaxed text-foreground/90 md:text-lg">
-                  {item.text}
+                  {t(item.text)}
                 </p>
 
                 <Tags items={item.technologies} />

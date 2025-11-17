@@ -1,6 +1,4 @@
 import { useTranslations } from 'next-intl'
-import Socials from '@/features/socials'
-import Button from '@/shared/ui/button'
 
 export default function Footer() {
   const t = useTranslations('common')
@@ -8,24 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer id="contact" className="text-foreground">
-      <div className="pb-20 md:pb-40 flex flex-col justify-center items-center text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
-          {t('lets')} <span className="font-normal">{t('talk')}</span> {t('for')}
-          <br />
-          {t('something-special')}
-        </h2>
-        <p className="max-w-lg text-lg md:text-xl mb-4 text-muted">
-          {t('footer-topic')}
-        </p>
-        <div className="flex flex-col gap-4">
-          <Socials />
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
-            <Button text={t('my-resume')} />
-            {/* <Button text={t('detailed-about-me')} variant="secondary" /> */}
-          </div>
-        </div>
-      </div>
+    <footer className="text-foreground">
       <div className="border-t border-outline/80 text-center py-8 text-muted">
         &copy;<time dateTime={String(currentYear)}>{currentYear}</time>{' '}
         {t('name-surname')}

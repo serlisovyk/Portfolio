@@ -10,7 +10,7 @@ export default function Intro() {
   const t = useTranslations('common')
 
   return (
-    <section className="px-4 pt-10 pb-30 md:pt-30 md:pb-45 lg:pb-60 text-foreground">
+    <section className="pt-10 pb-30 md:pt-30 md:pb-45 lg:pb-60 px-4 text-foreground">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10 xl:gap-30">
         <div className="max-w-xl text-foreground">
           <div className="text-3xl sm:text-5xl leading-snug mb-4 sm:mb-6">
@@ -35,7 +35,6 @@ export default function Intro() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button text={t('my-resume')} />
-            {/* <Button text={t('detailed-about-me')} variant="secondary" /> */}
           </div>
         </div>
         <div>

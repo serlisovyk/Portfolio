@@ -8,7 +8,7 @@ export default function Projects() {
   const t = useTranslations('common')
 
   return (
-    <section id="projects" className="pb-25 md:pb-50 px-4 text-foreground">
+    <section id="projects" className="pb-50 px-4 text-foreground">
       <h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">
         <span className="font-normal">{t('pet')}</span> {t('projects')}
       </h2>
