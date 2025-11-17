@@ -2,12 +2,7 @@
 
 import LanguageSwitcher from '@/features/language-switcher'
 import HeaderNavigation from './components/header-navigation'
-import dynamic from 'next/dynamic'
-
-const ThemeToggle = dynamic(() => import('@/features/theme-toggle'), {
-  ssr: false,
-  loading: () => <button aria-hidden className="h-12 w-12" />,
-})
+import ThemeToggle from '@/features/theme-toggle'
 
 export default function Header() {
   return (

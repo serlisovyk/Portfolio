@@ -13,7 +13,7 @@
   --glow: #9d4edd;
 }
 
-html[data-theme='dark'] {
+html.dark {
   --bg: #0e1014;
   --surface: #141822;
   --text: #f3f4f6;

@@ -1,17 +1,11 @@
 import { NextIntlClientProvider } from 'next-intl'
-import { ThemeProvider } from 'next-themes'
 import { ProvidersProps } from '@/shared/types'
+import { ThemeProvider } from './theme.provider'
 
-export default function Providers({ children }: ProvidersProps) {
+export default function Providers({ children, initialTheme }: ProvidersProps) {
   return (
     <NextIntlClientProvider>
-      <ThemeProvider
-        attribute="data-theme"
-        defaultTheme="system"
-        enableSystem={true}
-      >
-        {children}
-      </ThemeProvider>
+      <ThemeProvider initialTheme={initialTheme}>{children}</ThemeProvider>
     </NextIntlClientProvider>
   )
 }

@@ -5,6 +5,6 @@ export interface RootLayoutProps {
   params: Promise<RootLayoutParams>
 }
 
-interface RootLayoutParams {
+export interface RootLayoutParams {
   locale: string
 }
