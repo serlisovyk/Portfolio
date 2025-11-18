@@ -22,9 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col text-foreground">
-        <h3 className="mb-2 text-xl font-semibold md:text-2xl">
-          {project.title}
-        </h3>
+        <h3 className="mb-2 text-xl font-semibold md:text-2xl">{project.title}</h3>
 
         <p className="mb-3 text-muted">{t(project.text)}</p>
 
@@ -37,7 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.repository}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md border border-outline px-4 py-2 text-foreground transition duration-300 hover:border-primary hover:text-primary"
+                className="rounded-md border border-outline px-4 py-2 text-foreground theme-transition hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 GitHub
               </Link>

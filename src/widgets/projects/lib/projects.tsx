@@ -1,6 +1,8 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { FaLaptop } from 'react-icons/fa6'
+import SectionHeading from '@/shared/ui/section-heading'
 import ProjectCard from './components/projects-card'
 import { PROJECTS } from './constants'
 
@@ -9,9 +11,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className="pb-50 px-4 text-foreground">
-      <h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">
-        <span className="font-normal">{t('pet')}</span> {t('projects')}
-      </h2>
+      <SectionHeading className="text-center mb-10">
+        <FaLaptop /> <span className="font-normal">{t('pet')}</span> {t('projects')}
+      </SectionHeading>
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-2 gap-8">
         {PROJECTS.map((project) => (

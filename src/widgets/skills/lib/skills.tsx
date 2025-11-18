@@ -1,7 +1,9 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { LiaToolsSolid } from "react-icons/lia";
 import Button from '@/shared/ui/button'
+import SectionHeading from '@/shared/ui/section-heading'
 import { useSkillsAnimation } from './hooks'
 import { PREVIEW_COUNT, SKILLS_ITEMS } from './constants'
 
@@ -16,9 +18,9 @@ export default function Skills() {
 
   return (
     <section id="skills" className="pb-60 mx-auto text-foreground">
-      <h2 className="text-center text-2xl md:text-4xl font-bold mb-10">
-        <span className="font-normal">{t('my')}</span> {t('skills')}
-      </h2>
+      <SectionHeading className="text-center mb-10">
+        <LiaToolsSolid /> <span className="font-normal">{t('my')}</span> {t('skills')}
+      </SectionHeading>
       <div
         ref={gridRef}
         className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-20 w-full mb-10"
