@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { FiSun as Sun, FiMoon as Moon } from 'react-icons/fi'
-import { useTheme } from '@/shared/providers/theme.provider'
+import { useTheme } from '@/shared/theme'
 
 export default function ThemeToggle() {
   const t = useTranslations('common')
@@ -17,9 +17,15 @@ export default function ThemeToggle() {
       className="group inline-flex h-12 w-12 items-center justify-center cursor-pointer rounded-full border border-outline bg-surface text-foreground hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 theme-transition"
     >
       {theme === 'dark' ? (
-        <Sun size={24} className="group-active:scale-95 text-accent theme-transition" />
+        <Sun
+          size={24}
+          className="group-active:scale-95 text-accent theme-transition"
+        />
       ) : (
-        <Moon size={24} className="group-active:scale-95 text-accent theme-transition" />
+        <Moon
+          size={24}
+          className="group-active:scale-95 text-accent theme-transition"
+        />
       )}
     </button>
   )

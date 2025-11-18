@@ -1,8 +1,8 @@
 'use client'
 
 import LanguageSwitcher from '@/features/language-switcher'
-import HeaderNavigation from './components/header-navigation'
 import ThemeToggle from '@/features/theme-toggle'
+import HeaderNavigation from './components/header-navigation'
 
 export default function Header() {
   return (

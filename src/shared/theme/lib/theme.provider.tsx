@@ -1,25 +1,10 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import {
-  Theme,
-  THEMES,
-  THEME_COOKIE_MAX_AGE,
-  THEME_COOKIE_NAME,
-} from './theme.config'
+import { createContext, useState, useEffect } from 'react'
+import { THEME_COOKIE_MAX_AGE, THEME_COOKIE_NAME } from './constants'
+import { Theme, ThemeContextValue, ThemeProviderProps, THEMES } from './types'
 
-export interface ThemeContextValue {
-  theme: Theme
-  toggleTheme: () => void
-  setTheme: (theme: Theme) => void
-}
-
-export interface ThemeProviderProps {
-  initialTheme: Theme
-  children: ReactNode
-}
-
-const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
+export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
 export function ThemeProvider({ initialTheme, children }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(initialTheme)
@@ -44,12 +29,4 @@ export function ThemeProvider({ initialTheme, children }: ThemeProviderProps) {
   const value: ThemeContextValue = { theme, toggleTheme, setTheme }
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext)
-
-  if (!context) throw new Error('useTheme must be used within ThemeProvider')
-
-  return context
 }

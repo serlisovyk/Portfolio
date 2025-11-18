@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md transition-[color,background-color,box-shadow] duration-300 focus-visible:outline-none focus-visible:z-10',
+              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md theme-transition duration-300 focus-visible:outline-none focus-visible:z-10',
               activeLanguage
                 ? 'btn-gradient text-white hover:opacity-90 shadow-[0_0_0_2px_rgba(124,58,237,0.35)] focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.85)]'
                 : 'bg-transparent hover:bg-primary/20 hover:text-foreground shadow-[0_0_0_0_rgba(0,0,0,0)] focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.65)] focus-visible:bg-primary/20',

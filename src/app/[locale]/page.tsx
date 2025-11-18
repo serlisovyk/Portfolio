@@ -8,7 +8,7 @@ import Footer from '@/widgets/footer'
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden min-h-full">
       <Header />
       <main className="pt-28 md:pt-32">
         <Intro />
@@ -18,6 +18,6 @@ export default function Home() {
         <About />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
