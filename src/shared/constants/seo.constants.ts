@@ -9,19 +9,19 @@ import {
 
 export const metaByLocale: MetaByLocale = {
   ru: {
-    title: 'Сергей Лесовик — Frontend разработчик (Next.js, React, TypeScript)',
+    title: 'Сергей Лесовик — Frontend разработчик',
     description:
       'Фронтенд-разработчик с более чем годом опыта. Создаю быстрые и понятные интерфейсы на Next.js, React и TypeScript.',
     siteName: 'Сергей Лесовик — Портфолио',
   },
   uk: {
-    title: 'Сергій Лесовик — Frontend розробник (Next.js, React, TypeScript)',
+    title: 'Сергій Лісовик — Frontend розробник',
     description:
       'Фронтенд-розробник із понад роком досвіду. Створюю швидкі та зрозумілі інтерфейси на Next.js, React та TypeScript.',
     siteName: 'Сергій Лесовик — Портфоліо',
   },
   en: {
-    title: 'Serhii Lisovyk — Frontend Developer (Next.js, React, TypeScript)',
+    title: 'Serhii Lisovyk — Frontend Developer',
     description:
       'Frontend developer with 1+ year of experience. I build fast and clear interfaces with Next.js, React and TypeScript.',
     siteName: 'Serhii Lisovyk — Portfolio',

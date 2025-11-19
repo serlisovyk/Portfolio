@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <section id="about" className="pb-40 px-4 md:px-10">
-      <div className="flex flex-col xl:flex-row gap-6 sm:gap-10 xl:gap-40">
+      <div className="flex flex-col xl:flex-row items-start gap-6 sm:gap-10 xl:gap-40">
         <div>
           <SectionHeading className="mb-4 justify-start">
             <IoPerson /> {t('about')}

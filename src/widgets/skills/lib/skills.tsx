@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { IoConstruct } from 'react-icons/io5'
+import { IoSettings } from 'react-icons/io5'
 import Button from '@/shared/ui/button'
 import SectionHeading from '@/shared/ui/section-heading'
 import { useSkillsAnimation } from './hooks'
@@ -19,7 +19,7 @@ export default function Skills() {
   return (
     <section id="skills" className="pb-60 mx-auto text-foreground">
       <SectionHeading className="text-center mb-10">
-        <IoConstruct /> <span className="font-normal">{t('my')}</span> {t('skills')}
+        <IoSettings /> <span className="font-normal">{t('my')}</span> {t('skills')}
       </SectionHeading>
       <div
         ref={gridRef}

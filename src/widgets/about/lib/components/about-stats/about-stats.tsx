@@ -1,8 +1,11 @@
+import { useTranslations } from 'next-intl'
 import { ABOUT_STATS } from '../../constants'
 
 export default function AboutStats() {
+  const t = useTranslations('common')
+
   return (
-    <div className="flex flex-wrap gap-3 max-w-sm">
+    <div className="flex flex-col gap-5">
       {ABOUT_STATS.map((stat) => (
         <div
           key={stat.id}
@@ -10,7 +13,7 @@ export default function AboutStats() {
         >
           <h3 className="text-4xl sm:text-5xl font-extrabold mb-2">{stat.value}</h3>
           <div className="text-xs sm:text-sm uppercase tracking-wide">
-            {stat.label}
+            {t(stat.label)}
           </div>
         </div>
       ))}
