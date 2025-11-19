@@ -1,24 +1,30 @@
 import { SiGithub, SiGmail, SiLinkedin, SiTelegram } from 'react-icons/si'
+import {
+  EMAIL_LINK,
+  GITHUB_LINK,
+  LINKEDIN_LINK,
+  TELEGRAM_LINK,
+} from '@/shared/constants'
 
 export const SOCIAL_ITEMS = [
   {
     title: 'Gmail',
     icon: <SiGmail size={22} aria-hidden={true} />,
-    href: 'mailto:serlesovik@gmail.com',
+    href: EMAIL_LINK,
   },
   {
     title: 'Github',
     icon: <SiGithub size={22} aria-hidden={true} />,
-    href: 'https://github.com/serlisovyk',
+    href: GITHUB_LINK,
   },
   {
     title: 'Linkedin',
     icon: <SiLinkedin size={22} aria-hidden={true} />,
-    href: 'https://www.linkedin.com/in/serhii-lisovyk-b43a4b29b/',
+    href: LINKEDIN_LINK,
   },
   {
     title: 'Telegram',
     icon: <SiTelegram size={22} aria-hidden={true} />,
-    href: 'https://t.me/serlisovyk',
+    href: TELEGRAM_LINK,
   },
 ]

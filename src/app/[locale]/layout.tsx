@@ -3,10 +3,23 @@ import { hasLocale } from 'next-intl'
 import { Inter } from 'next/font/google'
 import { routing } from '@/shared/i18n'
 import { Providers } from '@/shared/providers'
-import { RootLayoutParams, RootLayoutProps } from '@/shared/types'
+import {
+  generateMetadataParams,
+  generateMetadataProps,
+  RootLayoutParams,
+  RootLayoutProps,
+} from '@/shared/types'
 import './globals.css'
 import { cookies } from 'next/headers'
 import { DEFAULT_THEME, Theme, isTheme } from '@/shared/providers/theme.config'
+import { SITE_URL } from '@/shared/config'
+import {
+  homepageJsonLd,
+  metaByLocale,
+  personJsonLd,
+  websiteJsonLd,
+} from '@/shared/constants'
+import JsonLd from '@/shared/ui/json-ld'
 
 const interSans = Inter({
   variable: '--font-inter',
@@ -15,12 +28,45 @@ const interSans = Inter({
   weight: ['400', '500', '600'],
 })
 
-export const metadata: Metadata = {
-  title: 'Serhii Lisovyk | Portfolio Website',
-  description: 'Serhii Lisovyk | Portfolio Website | Frontend Developer',
+export async function generateMetadata({
+  params,
+}: generateMetadataProps): Promise<Metadata> {
+  const { locale } = await params
+
+  const { title, description, siteName } = metaByLocale[locale] ?? metaByLocale.ru
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: {
+        ru: `${SITE_URL}/ru`,
+        uk: `${SITE_URL}/uk`,
+        en: `${SITE_URL}/en`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/${locale}`,
+      siteName,
+      images: [
+        {
+          url: `${SITE_URL}/profile.jpg`,
+          width: 680,
+          height: 680,
+          alt: title,
+        },
+      ],
+      type: 'website',
+    },
+  }
 }
 
-async function getCurrentLocale(params: Promise<RootLayoutParams>) {
+async function getCurrentLocale(
+  params: Promise<RootLayoutParams> | Promise<generateMetadataParams>
+) {
   const { locale } = await params
 
   return hasLocale(routing.locales, locale) ? locale : routing.defaultLocale
@@ -46,6 +92,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       suppressHydrationWarning
       className={`scroll-smooth ${theme}`}
     >
+      <head>
+        <JsonLd data={personJsonLd} />
+        <JsonLd data={websiteJsonLd} />
+        <JsonLd data={homepageJsonLd} />
+      </head>
       <body className={`${interSans.variable} antialiased`}>
         <Providers initialTheme={theme}>
           <div className="overflow-hidden min-h-full">{children}</div>

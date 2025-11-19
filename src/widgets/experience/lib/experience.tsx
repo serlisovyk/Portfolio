@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { FaBrain } from 'react-icons/fa6'
+import { IoBriefcase } from 'react-icons/io5'
 import Tags from '@/shared/ui/tags'
 import SectionHeading from '@/shared/ui/section-heading'
 import { EXPERIENCE_ITEMS } from './constants'
@@ -13,7 +13,7 @@ export default function Experience() {
     <section id="experience" className="pb-40 text-foreground">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeading className="text-center mb-10">
-          <FaBrain /> {t('experience')}
+          <IoBriefcase /> {t('experience')}
         </SectionHeading>
 
         <ol className="space-y-12">
