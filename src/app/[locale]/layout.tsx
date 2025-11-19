@@ -6,6 +6,14 @@ import { getCurrentTheme } from '@/shared/theme/server-index'
 import { getCurrentLocale } from '@/shared/i18n'
 import { RootLayoutProps } from '@/shared/types'
 import './globals.css'
+import { SITE_URL } from '@/shared/config'
+import {
+  homepageJsonLd,
+  metaByLocale,
+  personJsonLd,
+  websiteJsonLd,
+} from '@/shared/constants'
+import JsonLd from '@/shared/ui/json-ld'
 
 const interSans = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -14,9 +22,40 @@ const interSans = Inter({
   variable: '--font-inter',
 })
 
-export const metadata: Metadata = {
-  title: 'Serhii Lisovyk | Portfolio Website',
-  description: 'Serhii Lisovyk | Portfolio Website | Frontend Developer',
+export async function generateMetadata({
+  params,
+}: generateMetadataProps): Promise<Metadata> {
+  const { locale } = await params
+
+  const { title, description, siteName } = metaByLocale[locale] ?? metaByLocale.ru
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: {
+        ru: `${SITE_URL}/ru`,
+        uk: `${SITE_URL}/uk`,
+        en: `${SITE_URL}/en`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/${locale}`,
+      siteName,
+      images: [
+        {
+          url: `${SITE_URL}/profile.jpg`,
+          width: 680,
+          height: 680,
+          alt: title,
+        },
+      ],
+      type: 'website',
+    },
+  }
 }
 
 export default async function RootLayout({ children, params }: RootLayoutProps) {
@@ -30,6 +69,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       className={`scroll-smooth ${theme}`}
       suppressHydrationWarning
     >
+      <head>
+        <JsonLd data={personJsonLd} />
+        <JsonLd data={websiteJsonLd} />
+        <JsonLd data={homepageJsonLd} />
+      </head>
       <body className={`${interSans.variable} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
