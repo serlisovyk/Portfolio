@@ -10,9 +10,10 @@ export default function Projects() {
   const t = useTranslations('common')
 
   return (
-    <section id="projects" className="pb-50 px-4 text-foreground">
-      <SectionHeading className="text-center mb-10">
-        <IoCodeSlash /> <span className="font-normal">{t('pet')}</span> {t('projects')}
+    <section id="projects" className="pb-20 md:pb-35 lg:pb-50 px-4 text-foreground">
+      <SectionHeading className="items-center text-center mb-10">
+        <IoCodeSlash /> <span className="font-normal">{t('pet')}</span>
+        {t('projects')}
       </SectionHeading>
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-2 gap-8">

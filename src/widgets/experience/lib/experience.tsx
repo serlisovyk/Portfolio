@@ -10,9 +10,9 @@ export default function Experience() {
   const t = useTranslations('common')
 
   return (
-    <section id="experience" className="pb-40 text-foreground">
+    <section id="experience" className="pb-30 md:pb-45 lg:pb-60 text-foreground">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading className="text-center mb-10">
+        <SectionHeading className="items-center text-center mb-10">
           <IoTime /> {t('experience')}
         </SectionHeading>
 

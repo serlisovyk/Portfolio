@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden min-h-full">
       <Header />
-      <main className="pt-28 md:pt-32">
+      <main className="md:pt-32">
         <Intro />
         <Skills />
         <Experience />

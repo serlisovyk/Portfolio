@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article className="flex h-full flex-col rounded-2xl border border-outline bg-surface p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="mb-4 rounded-xl">
+      <div className="mb-5 rounded-xl">
         <Image
           src={project.image.src}
           alt={t(project.image.alt)}
