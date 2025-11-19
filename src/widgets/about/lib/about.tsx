@@ -13,7 +13,7 @@ export default function About() {
         <SectionHeading className="justify-start items-center mb-5">
           <IoPerson /> {t('about')}
         </SectionHeading>
-        <p className="max-w-4xl text-lg md:text-xl text-muted mb-5">
+        <p className="max-w-4xl text-lg md:text-xl text-muted text-center mb-5">
           {t('about-text')}
         </p>
         <Socials />
