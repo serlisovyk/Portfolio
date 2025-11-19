@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
+import { getCurrentLocale } from '@/shared/i18n'
 import { ThemeProvider } from '@/shared/theme'
 import { getCurrentTheme } from '@/shared/theme/server-index'
-import { getCurrentLocale } from '@/shared/i18n'
-import { RootLayoutProps } from '@/shared/types'
-import './globals.css'
+import JsonLd from '@/shared/ui/json-ld'
 import { SITE_URL } from '@/shared/config'
 import {
   homepageJsonLd,
@@ -13,7 +12,8 @@ import {
   personJsonLd,
   websiteJsonLd,
 } from '@/shared/constants'
-import JsonLd from '@/shared/ui/json-ld'
+import { generateMetadataProps, RootLayoutProps } from '@/shared/types'
+import './globals.css'
 
 const interSans = Inter({
   subsets: ['latin', 'cyrillic'],
