@@ -4,13 +4,15 @@ This is my personal portfolio website built with Next.js, React and TypeScript. 
 
 ## Demo
 
-Soon...
+https://portfolio-sigma-two-y3hyu3g61d.vercel.app/en
 
 ## Tools
 
 <p align="left">
 
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="40" height="40" alt="Next.js" title="Next.js" />
+
+  <img width="12" />
   
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="40" height="40" alt="React" title="React" />
 
