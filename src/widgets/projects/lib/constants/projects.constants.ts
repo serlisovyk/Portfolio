@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
       'Express.js',
       'Sequelize',
     ],
-    demo: 'soon',
+    demo: 'https://quotes-xi-five.vercel.app',
     repository: 'https://github.com/serlisovyk/Quotes',
   },
   {
