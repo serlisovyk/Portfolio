@@ -11,14 +11,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article className="flex h-full flex-col rounded-2xl border border-outline bg-surface p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="mb-5 rounded-xl">
-        <Image
-          src={project.image.src}
-          alt={t(project.image.alt)}
-          width={960}
-          height={320}
-          className="aspect-video h-80 object-cover rounded-md"
-        />
+      <div className="mb-5 overflow-hidden rounded-xl border border-outline/40 bg-surface">
+        <div className="relative aspect-video">
+          <Image
+            src={project.image.src}
+            alt={t(project.image.alt)}
+            fill
+            sizes="(min-width: 1024px) 540px, 100vw"
+          />
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col text-foreground">
@@ -35,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.repository}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md border border-outline px-4 py-2 text-foreground theme-transition hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2 font-medium theme-transition hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 GitHub
               </Link>
@@ -47,7 +48,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md px-4 py-2 btn-gradient text-white transition duration-300 hover:opacity-90"
+                className="rounded-md px-4 py-2 btn-gradient text-white transition duration-300 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 Demo
               </Link>

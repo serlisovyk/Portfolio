@@ -1,9 +1,16 @@
-import { SiGithub, SiGmail, SiLinkedin, SiTelegram } from 'react-icons/si'
+import {
+  SiGmail,
+  SiGithub,
+  SiLinkedin,
+  SiTelegram,
+  SiInstagram,
+} from 'react-icons/si'
 import {
   EMAIL_LINK,
   GITHUB_LINK,
   LINKEDIN_LINK,
   TELEGRAM_LINK,
+  INSTAGRAM_LINK,
 } from '@/shared/constants'
 
 export const SOCIAL_ITEMS = [
@@ -26,5 +33,10 @@ export const SOCIAL_ITEMS = [
     title: 'Telegram',
     icon: <SiTelegram size={22} aria-hidden={true} />,
     href: TELEGRAM_LINK,
+  },
+  {
+    title: 'Instagram',
+    icon: <SiInstagram size={22} aria-hidden={true} />,
+    href: INSTAGRAM_LINK,
   },
 ]

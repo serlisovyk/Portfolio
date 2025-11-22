@@ -31,7 +31,7 @@ export default function Experience() {
                     <Image
                       src={item.company.logo}
                       alt={item.company.name}
-                      width={210}
+                      width={192}
                       height={40}
                       className="h-10 w-auto object-contain"
                     />

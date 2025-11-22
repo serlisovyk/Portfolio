@@ -5,6 +5,7 @@ import {
   GITHUB_LINK,
   LINKEDIN_LINK,
   TELEGRAM_LINK,
+  INSTAGRAM_LINK,
 } from './personal.constants'
 
 export const metaByLocale: MetaByLocale = {
@@ -36,7 +37,13 @@ export const personJsonLd = {
   jobTitle: 'Frontend Developer',
   url: SITE_URL,
   image: `${SITE_URL}/profile.jpg`,
-  sameAs: [EMAIL_LINK, GITHUB_LINK, LINKEDIN_LINK, TELEGRAM_LINK],
+  sameAs: [
+    EMAIL_LINK.replace('mailto:', ''),
+    GITHUB_LINK,
+    LINKEDIN_LINK,
+    TELEGRAM_LINK,
+    INSTAGRAM_LINK,
+  ],
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Dnipro',

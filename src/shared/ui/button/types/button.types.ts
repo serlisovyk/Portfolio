@@ -7,6 +7,6 @@ export interface ButtonProps {
   className?: string
 }
 
-type ButtonVariant = 'primary' | 'secondary'
+type ButtonVariant = 'primary'
 
 type ButtonType = 'button' | 'submit'

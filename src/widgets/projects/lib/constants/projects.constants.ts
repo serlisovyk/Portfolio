@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
       'Express.js',
       'MongoDB',
     ],
-    demo: 'soon',
+    demo: 'https://pizza-client-red.vercel.app/',
     repository: 'https://github.com/serlisovyk/Pizza',
   },
 ]

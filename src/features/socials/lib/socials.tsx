@@ -3,7 +3,7 @@ import { SOCIAL_ITEMS } from './constants'
 
 export default function Socials() {
   return (
-    <article className="inline-flex items-center gap-4">
+    <article className="inline-flex items-center gap-2 sm:gap-4">
       {SOCIAL_ITEMS.map((item) => (
         <Link
           key={item.title}

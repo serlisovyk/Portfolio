@@ -5,3 +5,5 @@ export const GITHUB_LINK = 'https://github.com/serlisovyk'
 export const LINKEDIN_LINK = 'https://www.linkedin.com/in/serhii-lisovyk-b43a4b29b/'
 
 export const TELEGRAM_LINK = 'https://t.me/serlisovyk'
+
+export const INSTAGRAM_LINK = 'https://www.instagram.com/serlisovyk/'

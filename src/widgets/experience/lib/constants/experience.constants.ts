@@ -16,6 +16,8 @@ export const EXPERIENCE_ITEMS = [
       'Ant Design',
       'Styled Components',
       'Zustand',
+      'Jest',
+      'React Testing Library',
     ],
     text: 'experience-symfio',
   },

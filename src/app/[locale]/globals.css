@@ -55,6 +55,8 @@ body {
       var(--theme-transition-easing),
     color var(--theme-transition-duration) var(--theme-transition-easing),
     border-color var(--theme-transition-duration) var(--theme-transition-easing),
+    opacity var(--theme-transition-duration) var(--theme-transition-easing),
+    box-shadow var(--theme-transition-duration) var(--theme-transition-easing),
     fill var(--theme-transition-duration) var(--theme-transition-easing),
     stroke var(--theme-transition-duration) var(--theme-transition-easing);
 }
