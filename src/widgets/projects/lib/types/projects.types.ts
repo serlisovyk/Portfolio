@@ -16,3 +16,8 @@ interface ProjectImage {
 export interface ProjectCardProps {
   project: Project
 }
+
+export interface ProjectActionsProps {
+  demo: Project['demo']
+  repository: Project['repository']
+}
