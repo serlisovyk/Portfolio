@@ -1,10 +1,12 @@
-export enum LOCALES {
-  EN = 'en',
-  UK = 'uk',
-  RU = 'ru',
-}
+export const LOCALES = {
+  EN: 'en',
+  UK: 'uk',
+  RU: 'ru',
+} as const
 
-export type Locale = LOCALES.EN | LOCALES.RU | LOCALES.UK
+export const LOCALE_VALUES = [LOCALES.EN, LOCALES.UK, LOCALES.RU] as const
+
+export type Locale = (typeof LOCALES)[keyof typeof LOCALES]
 
 export const LOCALE_COOKIE_NAME = 'NEXT_LOCALE'
 

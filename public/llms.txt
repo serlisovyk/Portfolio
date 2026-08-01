@@ -1,0 +1,37 @@
+# Serhii Lisovyk Portfolio
+
+> Personal portfolio of Serhii Lisovyk, a frontend developer focused on Next.js, React, TypeScript, product UI, performance, and maintainable interface architecture.
+
+This site presents Serhii Lisovyk's frontend skills, commercial experience, selected projects, contact links, and multilingual portfolio pages. The canonical public site is `https://portfolio-sigma-two-y3hyu3g61d.vercel.app`.
+
+## Primary Pages
+
+- [English portfolio](https://portfolio-sigma-two-y3hyu3g61d.vercel.app/en): Main English version of the portfolio.
+- [Ukrainian portfolio](https://portfolio-sigma-two-y3hyu3g61d.vercel.app/uk): Ukrainian localized version.
+- [Russian portfolio](https://portfolio-sigma-two-y3hyu3g61d.vercel.app/ru): Russian localized version.
+- [Sitemap](https://portfolio-sigma-two-y3hyu3g61d.vercel.app/sitemap.xml): Indexable localized URLs.
+
+## Project Highlights
+
+- [Quotes demo](https://quotes-xi-five.vercel.app): Full-stack PERN quotes application with search, tags, CRUD flows, and REST API integration.
+- [Quotes repository](https://github.com/serlisovyk/Quotes): Source code for the Quotes project.
+- [Pizza demo](https://pizza-client-red.vercel.app/): Full-stack MERN pizza store with catalog filtering, sorting, pagination, and cart state.
+- [Pizza repository](https://github.com/serlisovyk/Pizza): Source code for the Pizza project.
+
+## Profiles
+
+- [GitHub](https://github.com/serlisovyk): Source code and public repositories.
+- [LinkedIn](https://www.linkedin.com/in/serhii-lisovyk-b43a4b29b/): Professional profile, certificates, and recommendations.
+- [Telegram](https://t.me/serlisovyk): Direct contact channel.
+
+## Technical Context
+
+- Stack: Next.js, React, TypeScript, Tailwind CSS, next-intl, next-themes, GSAP.
+- Languages: English, Ukrainian, Russian.
+- Site features: responsive layout, dark/light theme, localized metadata, Open Graph metadata, sitemap, robots.txt, JSON-LD, and optimized images via `next/image`.
+
+## Contact
+
+- Email: serlesovik@gmail.com
+- GitHub: https://github.com/serlisovyk
+- LinkedIn: https://www.linkedin.com/in/serhii-lisovyk-b43a4b29b/

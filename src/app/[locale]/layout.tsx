@@ -4,8 +4,9 @@ import { setRequestLocale } from 'next-intl/server'
 import { getCurrentLocale, routing } from '@/shared/i18n'
 import Providers from '@/shared/providers'
 import JsonLd from '@/shared/ui/json-ld'
-import { SITE_URL } from '@/shared/config'
+import { SITE_URL_ENV } from '@/shared/config'
 import {
+  getLanguageAlternates,
   homepageJsonLd,
   metaByLocale,
   personJsonLd,
@@ -34,31 +35,38 @@ export async function generateMetadata({
 
   const { title, description, siteName } = metaByLocale[locale] ?? metaByLocale.ru
 
+  const alternateLocales = routing.locales.filter((item) => item !== locale)
+
   return {
+    metadataBase: SITE_URL_ENV,
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}/${locale}`,
-      languages: {
-        ru: `${SITE_URL}/ru`,
-        uk: `${SITE_URL}/uk`,
-        en: `${SITE_URL}/en`,
-      },
+      canonical: `${SITE_URL_ENV}/${locale}`,
+      languages: getLanguageAlternates(),
     },
     openGraph: {
       title,
       description,
-      url: `${SITE_URL}/${locale}`,
+      url: `${SITE_URL_ENV}/${locale}`,
       siteName,
+      locale,
+      alternateLocale: alternateLocales,
       images: [
         {
-          url: `${SITE_URL}/profile.jpg`,
+          url: `${SITE_URL_ENV}/profile.jpg`,
           width: 680,
           height: 680,
           alt: title,
         },
       ],
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${SITE_URL_ENV}/profile.jpg`],
     },
   }
 }

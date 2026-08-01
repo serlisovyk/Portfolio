@@ -1,4 +1,5 @@
-import { SITE_URL } from '../config'
+import { SITE_URL_ENV } from '../config'
+import { routing } from '../i18n'
 import { MetaByLocale } from '../types'
 import {
   EMAIL_ADDRESS,
@@ -35,8 +36,8 @@ export const personJsonLd = {
   name: 'Serhii Lisovyk',
   alternateName: ['Сергей Лесовик', 'Сергій Лесовик'],
   jobTitle: 'Frontend Developer',
-  url: SITE_URL,
-  image: `${SITE_URL}/profile.jpg`,
+  url: SITE_URL_ENV,
+  image: `${SITE_URL_ENV}/profile.jpg`,
   email: EMAIL_ADDRESS,
   sameAs: [GITHUB_LINK, LINKEDIN_LINK, TELEGRAM_LINK, INSTAGRAM_LINK],
   address: {
@@ -58,7 +59,7 @@ export const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Serhii Lisovyk — Frontend Developer',
-  url: SITE_URL,
+  url: SITE_URL_ENV,
   creator: {
     '@type': 'Person',
     name: 'Serhii Lisovyk',
@@ -69,9 +70,18 @@ export const homepageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Portfolio — Serhii Lisovyk',
-  url: SITE_URL,
+  url: SITE_URL_ENV,
   isPartOf: {
     '@type': 'WebSite',
-    url: SITE_URL,
+    url: SITE_URL_ENV,
   },
+}
+
+export function getLanguageAlternates() {
+  return {
+    'x-default': `${SITE_URL_ENV}/${routing.defaultLocale}`,
+    ...Object.fromEntries(
+      routing.locales.map((locale) => [locale, `${SITE_URL_ENV}/${locale}`]),
+    ),
+  }
 }
