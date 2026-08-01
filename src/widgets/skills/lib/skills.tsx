@@ -17,22 +17,22 @@ export default function Skills() {
   const hasMore = SKILLS_ITEMS.length > PREVIEW_COUNT
 
   return (
-    <section id="skills" className="pb-30 md:pb-45 lg:pb-60 mx-auto text-foreground">
-      <SectionHeading className="items-center text-center mb-10">
+    <section id="skills" className="text-foreground mx-auto pb-30 md:pb-45 lg:pb-60">
+      <SectionHeading className="mb-10 items-center text-center">
         <IoSettings /> <span className="font-normal">{t('my')}</span> {t('skills')}
       </SectionHeading>
       <div
         ref={gridRef}
-        className="grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] xl:grid-cols-[repeat(4,auto)] justify-items-center gap-x-10 gap-y-14 lg:gap-x-20 w-full mb-10"
+        className="mb-10 grid w-full grid-cols-[repeat(1,auto)] justify-items-center gap-x-10 gap-y-14 sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] lg:gap-x-20 xl:grid-cols-[repeat(4,auto)]"
       >
         {items.map(({ text, icon }) => (
           <div
             key={text}
             data-skill-card
-            className="flex flex-col items-center justify-center text-center gap-5 rounded-md border border-outline bg-surface p-5 w-46 h-46 cursor-default hover:border-primary hover:bg-surface/80 transition-colors duration-300"
+            className="border-outline bg-surface hover:border-primary hover:bg-surface/80 flex h-46 w-46 cursor-default flex-col items-center justify-center gap-5 rounded-md border p-5 text-center transition-colors duration-300"
           >
             {icon}
-            <span className="text-xl text-muted">{text}</span>
+            <span className="text-muted text-xl">{text}</span>
           </div>
         ))}
       </div>

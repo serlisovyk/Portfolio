@@ -6,7 +6,7 @@ export default function Tags({ items }: TagsProps) {
       {items.map((item) => (
         <span
           key={item}
-          className="cursor-default rounded-full border border-outline bg-surface px-3 py-1.5 text-sm text-foreground/90 transition-colors duration-300 md:text-base"
+          className="border-outline bg-surface text-foreground/90 cursor-default rounded-full border px-3 py-1.5 text-sm transition-colors duration-300 md:text-base"
         >
           {item}
         </span>

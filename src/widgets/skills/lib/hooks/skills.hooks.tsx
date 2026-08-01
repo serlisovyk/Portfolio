@@ -14,7 +14,7 @@ export function useSkillsAnimation() {
     if (!gridRef.current) return []
 
     const cards = Array.from(
-      gridRef.current.querySelectorAll<HTMLElement>('[data-skill-card]')
+      gridRef.current.querySelectorAll<HTMLElement>('[data-skill-card]'),
     )
 
     return cards.slice(PREVIEW_COUNT)
@@ -60,7 +60,7 @@ export function useSkillsAnimation() {
     animationRef.current = gsap.fromTo(
       newCards,
       { autoAlpha: 0, y: 16 },
-      { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out' }
+      { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out' },
     )
 
     return () => void animationRef.current?.kill()

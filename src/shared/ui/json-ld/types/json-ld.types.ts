@@ -1,3 +1,3 @@
 export interface JsonLdProps {
-  data: Record<string, any>
+  data: Record<string, unknown>
 }

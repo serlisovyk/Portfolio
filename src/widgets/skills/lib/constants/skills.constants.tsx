@@ -8,7 +8,7 @@ import {
   SiTailwindcss,
   SiGit,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiWebpack,
   SiVite,
   SiJest,
@@ -56,7 +56,7 @@ export const SKILLS_ITEMS = [
   },
   {
     text: 'CSS',
-    icon: <SiCss3 size={56} aria-hidden={true} />,
+    icon: <SiCss size={56} aria-hidden={true} />,
   },
 
   {

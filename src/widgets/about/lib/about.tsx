@@ -8,12 +8,12 @@ export default function About() {
   const t = useTranslations('common')
 
   return (
-    <section id="about" className="pb-20 md:pb-35 lg:pb-50 px-4 md:px-10">
-      <div className="flex flex-col justify-center items-center">
-        <SectionHeading className="justify-start items-center mb-5">
+    <section id="about" className="px-4 pb-20 md:px-10 md:pb-35 lg:pb-50">
+      <div className="flex flex-col items-center justify-center">
+        <SectionHeading className="mb-5 items-center justify-start">
           <IoPerson /> {t('about')}
         </SectionHeading>
-        <p className="max-w-4xl text-lg md:text-xl text-muted text-center mb-5">
+        <p className="text-muted mb-5 max-w-4xl text-center text-lg md:text-xl">
           {t('about-text')}
         </p>
         <Socials />

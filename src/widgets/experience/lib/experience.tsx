@@ -10,9 +10,9 @@ export default function Experience() {
   const t = useTranslations('common')
 
   return (
-    <section id="experience" className="pb-30 md:pb-45 lg:pb-60 text-foreground">
+    <section id="experience" className="text-foreground pb-30 md:pb-45 lg:pb-60">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading className="items-center text-center mb-10">
+        <SectionHeading className="mb-10 items-center text-center">
           <IoTime /> {t('experience')}
         </SectionHeading>
 
@@ -20,8 +20,8 @@ export default function Experience() {
           {EXPERIENCE_ITEMS.map((item) => (
             <li key={item.id} className="md:flex md:items-stretch md:gap-8">
               <aside className="hidden w-48 shrink-0 md:block">
-                <div className="flex h-full flex-col items-end gap-3 text-muted">
-                  <time className="mb-2 whitespace-nowrap text-lg">{item.time}</time>
+                <div className="text-muted flex h-full flex-col items-end gap-3">
+                  <time className="mb-2 text-lg whitespace-nowrap">{item.time}</time>
 
                   <Link
                     href={item.company.link}
@@ -40,15 +40,15 @@ export default function Experience() {
               </aside>
 
               <div className="relative hidden h-full w-8 shrink-0 md:block">
-                <div className="absolute inset-y-0 left-1/2 w-px h-100 -translate-x-1/2 bg-outline" />
-                <span className="absolute left-1/2 top-5 h-6 w-6 -translate-x-1/2 rounded-full bg-primary ring-4 ring-background" />
+                <div className="bg-outline absolute inset-y-0 left-1/2 h-100 w-px -translate-x-1/2" />
+                <span className="bg-primary ring-background absolute top-5 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full ring-4" />
               </div>
 
-              <div className="relative flex-1 border-l border-outline pl-6 md:border-0 md:pl-0">
-                <span className="absolute left-0 top-1 h-6 w-6 -translate-x-1/2 rounded-full bg-primary ring-4 ring-background md:hidden" />
+              <div className="border-outline relative flex-1 border-l pl-6 md:border-0 md:pl-0">
+                <span className="bg-primary ring-background absolute top-1 left-0 h-6 w-6 -translate-x-1/2 rounded-full ring-4 md:hidden" />
 
                 <div className="mb-3 flex items-center gap-5 md:hidden">
-                  <time className="whitespace-nowrap text-muted">{item.time}</time>
+                  <time className="text-muted whitespace-nowrap">{item.time}</time>
 
                   <Image
                     src={item.company.logo}
@@ -63,11 +63,11 @@ export default function Experience() {
                   {item.role}
                 </h3>
 
-                <div className="mb-3 whitespace-nowrap text-muted text-xl">
+                <div className="text-muted mb-3 text-xl whitespace-nowrap">
                   {item.state}
                 </div>
 
-                <p className="text-base leading-relaxed text-foreground/90 md:text-lg">
+                <p className="text-foreground/90 text-base leading-relaxed md:text-lg">
                   {t(item.text)}
                 </p>
 

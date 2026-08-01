@@ -10,10 +10,10 @@ export default function Intro() {
   const t = useTranslations('common')
 
   return (
-    <section className="pt-10 pb-30 md:pt-30 md:pb-45 lg:pb-60 px-4 text-foreground">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-16 xl:gap-30">
-        <div className="max-w-xl text-foreground">
-          <div className="text-2xl sm:text-5xl leading-snug mb-5 sm:mb-6">
+    <section className="text-foreground px-4 pt-10 pb-30 md:pt-30 md:pb-45 lg:pb-60">
+      <div className="flex flex-col items-center justify-center gap-16 lg:flex-row xl:gap-30">
+        <div className="text-foreground max-w-xl">
+          <div className="mb-5 text-2xl leading-snug sm:mb-6 sm:text-5xl">
             <h1>{t('greeting')}</h1>
             <TextType
               text={INTRO_TYPING_TEXTS}
@@ -25,17 +25,17 @@ export default function Intro() {
               className="hero-gradient"
             />
           </div>
-          <p className="text-lg sm:text-xl text-muted mb-5 sm:mb-8">
+          <p className="text-muted mb-5 text-lg sm:mb-8 sm:text-xl">
             {t('intro-topic')}
           </p>
-          <div className="flex flex-col md:flex-row justify-between gap-5 mb-5 sm:mb-8">
+          <div className="mb-5 flex flex-col justify-between gap-5 sm:mb-8 md:flex-row">
             <Socials />
             <div className="flex items-center gap-2">
               <HiOutlineMapPin size={28} className="text-accent" />
-              <span className="text-lg sm:text-xl text-muted">{t('address')}</span>
+              <span className="text-muted text-lg sm:text-xl">{t('address')}</span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row">
             <Button text={t('my-resume')} />
           </div>
         </div>

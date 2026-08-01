@@ -65,7 +65,7 @@ export default function TextType({
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     )
 
     observer.observe(containerRef.current)
@@ -124,7 +124,7 @@ export default function TextType({
               setDisplayedText((prev) => prev + processedText[currentCharIndex])
               setCurrentCharIndex((prev) => prev + 1)
             },
-            variableSpeed ? getRandomSpeed() : typingSpeed
+            variableSpeed ? getRandomSpeed() : typingSpeed,
           )
         } else if (textArray.length > 1) {
           timeout = setTimeout(() => {
@@ -183,6 +183,6 @@ export default function TextType({
           {cursorCharacter}
         </span>
       )}
-    </span>
+    </span>,
   )
 }

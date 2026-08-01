@@ -10,13 +10,13 @@ export default function Projects() {
   const t = useTranslations('common')
 
   return (
-    <section id="projects" className="pb-20 md:pb-35 lg:pb-50 px-4 text-foreground">
-      <SectionHeading className="items-center text-center mb-10">
+    <section id="projects" className="text-foreground px-4 pb-20 md:pb-35 lg:pb-50">
+      <SectionHeading className="mb-10 items-center text-center">
         <IoCodeSlash /> <span className="font-normal">{t('pet')}</span>
         {t('projects')}
       </SectionHeading>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
         {PROJECTS.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

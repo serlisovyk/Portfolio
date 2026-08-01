@@ -6,7 +6,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <h2
-      className={`text-3xl md:text-4xl font-bold flex gap-3 justify-center ${className}`}
+      className={`flex justify-center gap-3 text-3xl font-bold md:text-4xl ${className}`}
     >
       {children}
     </h2>

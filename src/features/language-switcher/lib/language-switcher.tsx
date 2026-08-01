@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center rounded-md border border-outline bg-surface/70 text-foreground shadow-sm theme-transition"
+      className="border-outline bg-surface/70 text-foreground theme-transition inline-flex items-center rounded-md border shadow-sm"
       role="tablist"
       aria-label={t('language-switcher')}
     >
@@ -39,10 +39,10 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={[
-              'px-3.5 py-2.5 text-sm font-semibold leading-none cursor-pointer rounded-none first:rounded-l-md last:rounded-r-md theme-transition duration-300 focus-visible:outline-none focus-visible:z-10',
+              'theme-transition cursor-pointer rounded-none px-3.5 py-2.5 text-sm leading-none font-semibold duration-300 first:rounded-l-md last:rounded-r-md focus-visible:z-10 focus-visible:outline-none',
               activeLanguage
-                ? 'btn-gradient text-white hover:opacity-90 shadow-[0_0_0_2px_rgba(124,58,237,0.35)] focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.85)]'
-                : 'bg-transparent hover:bg-primary/20 hover:text-foreground shadow-[0_0_0_0_rgba(0,0,0,0)] focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.65)] focus-visible:bg-primary/20',
+                ? 'btn-gradient text-white shadow-[0_0_0_2px_rgba(124,58,237,0.35)] hover:opacity-90 focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.85)]'
+                : 'hover:bg-primary/20 hover:text-foreground focus-visible:bg-primary/20 bg-transparent shadow-[0_0_0_0_rgba(0,0,0,0)] focus-visible:shadow-[0_0_0_2px_rgba(124,58,237,0.65)]',
             ].join(' ')}
           >
             {label}

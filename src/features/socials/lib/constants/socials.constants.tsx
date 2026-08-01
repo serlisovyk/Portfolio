@@ -1,10 +1,5 @@
-import {
-  SiGmail,
-  SiGithub,
-  SiLinkedin,
-  SiTelegram,
-  SiInstagram,
-} from 'react-icons/si'
+import { SiGmail, SiGithub, SiTelegram, SiInstagram } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa'
 import {
   EMAIL_LINK,
   GITHUB_LINK,
@@ -26,7 +21,7 @@ export const SOCIAL_ITEMS = [
   },
   {
     title: 'Linkedin',
-    icon: <SiLinkedin size={22} aria-hidden={true} />,
+    icon: <FaLinkedin size={22} aria-hidden={true} />,
     href: LINKEDIN_LINK,
   },
   {

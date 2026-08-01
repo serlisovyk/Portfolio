@@ -10,8 +10,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const t = useTranslations('common')
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-outline bg-surface p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="mb-5 overflow-hidden rounded-xl border border-outline/40 bg-surface">
+    <article className="border-outline bg-surface flex h-full flex-col rounded-2xl border p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
+      <div className="border-outline/40 bg-surface mb-5 overflow-hidden rounded-xl border">
         <div className="relative aspect-video">
           <Image
             src={project.image.src}
@@ -22,10 +22,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col text-foreground">
+      <div className="text-foreground flex flex-1 flex-col">
         <h3 className="mb-2 text-xl font-semibold md:text-2xl">{project.title}</h3>
 
-        <p className="mb-3 text-muted">{t(project.text)}</p>
+        <p className="text-muted mb-3">{t(project.text)}</p>
 
         <div className="mt-auto pt-4">
           <Tags items={project.tags} />
@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.repository}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-4 py-2 font-medium theme-transition hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="border-primary/40 bg-primary/10 theme-transition focus-visible:ring-primary/50 focus-visible:ring-offset-background inline-flex items-center gap-2 rounded-md border px-4 py-2 font-medium hover:opacity-70 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 GitHub
               </Link>
@@ -48,7 +48,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md px-4 py-2 btn-gradient text-white transition duration-300 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="btn-gradient focus-visible:ring-primary/50 focus-visible:ring-offset-background rounded-md px-4 py-2 text-white transition duration-300 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 Demo
               </Link>
