@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { HEADER_NAV_LINKS } from '../../constants'

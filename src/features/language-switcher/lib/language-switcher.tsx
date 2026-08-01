@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
   return (
     <div
       className="border-outline bg-surface/70 text-foreground theme-transition inline-flex items-center rounded-md border shadow-sm"
-      role="tablist"
+      role="group"
       aria-label={t('language-switcher')}
     >
       {LANGUAGE_SWITCHER_OPTIONS.map(({ code, label }) => {
@@ -41,8 +41,9 @@ export default function LanguageSwitcher() {
         return (
           <button
             key={code}
-            role="tab"
-            aria-selected={activeLanguage}
+            type="button"
+            aria-label={`${t('language-switcher')}: ${label}`}
+            aria-pressed={activeLanguage}
             disabled={isPending}
             onClick={() => setLocale(code)}
             className={cn(

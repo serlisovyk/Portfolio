@@ -1,5 +1,3 @@
-'use client'
-
 import LanguageSwitcher from '@/features/language-switcher'
 import ThemeToggle from '@/features/theme-toggle'
 import HeaderNavigation from './components/header-navigation'

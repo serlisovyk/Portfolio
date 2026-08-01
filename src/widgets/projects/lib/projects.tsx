@@ -1,5 +1,3 @@
-'use client'
-
 import { useTranslations } from 'next-intl'
 import { IoCodeSlash } from 'react-icons/io5'
 import SectionHeading from '@/shared/ui/section-heading'
