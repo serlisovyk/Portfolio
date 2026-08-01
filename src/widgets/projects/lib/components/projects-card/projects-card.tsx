@@ -27,6 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             alt={t(imageAlt)}
             fill
             sizes="(min-width: 1024px) 540px, 100vw"
+            className="object-cover"
           />
         </div>
       </div>

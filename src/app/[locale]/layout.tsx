@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
-import { getCurrentLocale } from '@/shared/i18n'
-import { ThemeProvider } from '@/shared/theme'
-import { getCurrentTheme } from '@/shared/theme/server-index'
+import { setRequestLocale } from 'next-intl/server'
+import { getCurrentLocale, routing } from '@/shared/i18n'
+import { ThemeProvider, DEFAULT_THEME, THEME_INIT_SCRIPT } from '@/shared/theme'
 import JsonLd from '@/shared/ui/json-ld'
 import { SITE_URL } from '@/shared/config'
 import {
@@ -21,6 +21,12 @@ const interSans = Inter({
   weight: ['400', '500', '600'],
   variable: '--font-inter',
 })
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 export async function generateMetadata({
   params,
@@ -61,22 +67,23 @@ export async function generateMetadata({
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const currentLocale = await getCurrentLocale(params)
 
-  const theme = await getCurrentTheme()
+  setRequestLocale(currentLocale)
 
   return (
     <html
       lang={currentLocale}
-      className={`scroll-smooth ${theme}`}
+      className={`scroll-smooth ${DEFAULT_THEME}`}
       suppressHydrationWarning
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <JsonLd data={personJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={homepageJsonLd} />
       </head>
       <body className={`${interSans.variable} antialiased`}>
         <NextIntlClientProvider>
-          <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
+          <ThemeProvider initialTheme={DEFAULT_THEME}>{children}</ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

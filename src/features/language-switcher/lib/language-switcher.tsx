@@ -2,7 +2,12 @@
 
 import { useLocale, useTranslations } from 'next-intl'
 import { useTransition } from 'react'
-import { usePathname, useRouter } from '@/shared/i18n'
+import {
+  usePathname,
+  useRouter,
+  LOCALE_COOKIE_MAX_AGE,
+  LOCALE_COOKIE_NAME,
+} from '@/shared/i18n'
 import { cn, setCookie } from '@/shared/utils'
 import { LANGUAGE_SWITCHER_OPTIONS } from './constants'
 
@@ -18,7 +23,7 @@ export default function LanguageSwitcher() {
   const setLocale = (nextLocale: string) => {
     startTransition(() => {
       router.replace({ pathname }, { locale: nextLocale })
-      setCookie(`NEXT_LOCALE=${nextLocale}; Path=/; Max-Age=31536000; SameSite=Lax`)
+      setCookie(LOCALE_COOKIE_NAME, nextLocale, { maxAge: LOCALE_COOKIE_MAX_AGE })
     })
   }
 

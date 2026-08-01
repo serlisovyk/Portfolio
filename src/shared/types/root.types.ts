@@ -6,6 +6,10 @@ export interface RootLayoutProps {
   params: Promise<RootLayoutParams>
 }
 
+export interface LocalePageProps {
+  params: Promise<RootLayoutParams>
+}
+
 export interface RootLayoutParams {
   locale: string
 }

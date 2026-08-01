@@ -1,27 +1,28 @@
 'use client'
 
-import { createContext, useState, useEffect } from 'react'
-import { IS_CLIENT } from '@/shared/constants'
-import { setCookie } from '@/shared/utils'
-import { THEME_COOKIE_MAX_AGE, THEME_COOKIE_NAME } from './constants'
+import { createContext, useEffect, useSyncExternalStore } from 'react'
+import { IS_CLIENT } from '@/shared/constants/runtime.constants'
+import { getStoredTheme, saveTheme, subscribeToThemeChange } from './utils'
 import { Theme, ThemeContextValue, ThemeProviderProps, THEMES } from './types'
 
 export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
 export function ThemeProvider({ initialTheme, children }: ThemeProviderProps) {
-  const [theme, setThemeState] = useState<Theme>(initialTheme)
+  const theme = useSyncExternalStore(
+    subscribeToThemeChange,
+    getStoredTheme,
+    () => initialTheme,
+  )
 
   useEffect(() => {
     if (!IS_CLIENT) return
 
-    document.documentElement.classList.toggle(THEMES.DARK, theme === THEMES.DARK)
+    document.documentElement.classList.remove(THEMES.DARK, THEMES.LIGHT)
+    document.documentElement.classList.add(theme)
   }, [theme])
 
   const setTheme = (nextTheme: Theme) => {
-    setThemeState(nextTheme)
-    setCookie(
-      `${THEME_COOKIE_NAME}=${nextTheme}; path=/; max-age=${THEME_COOKIE_MAX_AGE}`,
-    )
+    saveTheme(nextTheme)
   }
 
   const toggleTheme = () => {
