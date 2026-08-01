@@ -1,4 +1,4 @@
-export const EMAIL_LINK = 'mailto:serlesovik@gmail.com'
+export const EMAIL_ADDRESS = 'serlesovik@gmail.com'
 
 export const GITHUB_LINK = 'https://github.com/serlisovyk'
 

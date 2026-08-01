@@ -14,15 +14,21 @@ export default function ThemeToggle() {
 
   const isDarkTheme = theme !== THEME_LIGHT
 
-  const toggleTheme = () => {
-    setTheme(isDarkTheme ? THEME_LIGHT : THEME_DARK)
-  }
+  const currentTheme = isDarkTheme ? THEME_DARK : THEME_LIGHT
+
+  const nextTheme = isDarkTheme ? THEME_LIGHT : THEME_DARK
+
+  const toggleTheme = () => setTheme(nextTheme)
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
-      aria-label={t('toggle-theme')}
+      aria-label={`${t('toggle-theme')}: ${currentTheme}`}
+      aria-pressed={isDarkTheme}
+      data-theme={currentTheme}
+      data-next-theme={nextTheme}
+      title={`${t('toggle-theme')}: ${currentTheme}`}
       className="group border-outline bg-surface text-foreground hover:border-primary hover:text-primary focus-visible:ring-primary/50 theme-transition inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border focus-visible:ring-2 focus-visible:outline-none"
     >
       <Sun

@@ -17,7 +17,10 @@ export default function Skills() {
   const hasMore = SKILLS_ITEMS.length > PREVIEW_COUNT
 
   return (
-    <section id="skills" className="text-foreground mx-auto pb-30 md:pb-45 lg:pb-60">
+    <section
+      id="skills"
+      className="text-foreground mx-auto scroll-mt-24 pb-30 md:pb-45 lg:pb-60"
+    >
       <SectionHeading className="mb-10 items-center text-center">
         <IoSettings /> <span className="font-normal">{t('my')}</span> {t('skills')}
       </SectionHeading>

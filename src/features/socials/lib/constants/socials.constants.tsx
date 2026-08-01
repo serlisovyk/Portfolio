@@ -1,7 +1,7 @@
 import { SiGmail, SiGithub, SiTelegram, SiInstagram } from 'react-icons/si'
 import { FaLinkedin } from 'react-icons/fa'
 import {
-  EMAIL_LINK,
+  EMAIL_ADDRESS,
   GITHUB_LINK,
   LINKEDIN_LINK,
   TELEGRAM_LINK,
@@ -12,7 +12,7 @@ export const SOCIAL_ITEMS = [
   {
     title: 'Gmail',
     icon: <SiGmail size={22} aria-hidden={true} />,
-    href: EMAIL_LINK,
+    href: `mailto:${EMAIL_ADDRESS}`,
   },
   {
     title: 'Github',

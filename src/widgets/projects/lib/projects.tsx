@@ -10,7 +10,10 @@ export default function Projects() {
   const t = useTranslations('common')
 
   return (
-    <section id="projects" className="text-foreground px-4 pb-20 md:pb-35 lg:pb-50">
+    <section
+      id="projects"
+      className="text-foreground scroll-mt-24 px-4 pb-20 md:pb-35 lg:pb-50"
+    >
       <SectionHeading className="mb-10 items-center text-center">
         <IoCodeSlash /> <span className="font-normal">{t('pet')}</span>
         {t('projects')}

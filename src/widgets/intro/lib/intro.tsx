@@ -46,7 +46,8 @@ export default function Intro() {
             alt={t('profile-photo')}
             width={500}
             height={500}
-            className="rounded-full"
+            sizes="(max-width: 640px) calc(100vw - 2rem), 500px"
+            className="h-auto w-full max-w-[500px] rounded-full"
             loading="eager"
             fetchPriority="high"
           />
