@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { NextIntlClientProvider } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import { getCurrentLocale, routing } from '@/shared/i18n'
-import { ThemeProvider, DEFAULT_THEME, THEME_INIT_SCRIPT } from '@/shared/theme'
+import Providers from '@/shared/providers'
 import JsonLd from '@/shared/ui/json-ld'
 import { SITE_URL } from '@/shared/config'
 import {
@@ -72,19 +71,17 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html
       lang={currentLocale}
-      className={`scroll-smooth ${DEFAULT_THEME}`}
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <JsonLd data={personJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <JsonLd data={homepageJsonLd} />
       </head>
       <body className={`${interSans.variable} antialiased`}>
-        <NextIntlClientProvider>
-          <ThemeProvider initialTheme={DEFAULT_THEME}>{children}</ThemeProvider>
-        </NextIntlClientProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

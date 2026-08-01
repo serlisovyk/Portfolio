@@ -1,0 +1,27 @@
+.icon {
+  position: absolute;
+  transition:
+    opacity var(--theme-transition-duration) var(--theme-transition-easing),
+    transform var(--theme-transition-duration) var(--theme-transition-easing),
+    color var(--theme-transition-duration) var(--theme-transition-easing);
+}
+
+:global(html:not(.dark)) .sun {
+  opacity: 0;
+  transform: rotate(-20deg) scale(0.85);
+}
+
+:global(html:not(.dark)) .moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+:global(html.dark) .sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+:global(html.dark) .moon {
+  opacity: 0;
+  transform: rotate(20deg) scale(0.85);
+}

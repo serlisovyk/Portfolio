@@ -1,0 +1,11 @@
+.heroGradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--brand) 0%,
+    var(--accent-2) 55%,
+    var(--accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

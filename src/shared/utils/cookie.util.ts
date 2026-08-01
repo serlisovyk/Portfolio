@@ -14,24 +14,6 @@ export function setCookie(
   })
 }
 
-export function getCookie(name: string) {
-  if (!IS_CLIENT) return undefined
-
-  const encodedName = `${encodeURIComponent(name)}=`
-
-  const cookie = document.cookie
-    .split('; ')
-    .find((item) => item.startsWith(encodedName))
-
-  if (!cookie) return undefined
-
-  try {
-    return decodeURIComponent(cookie.slice(encodedName.length))
-  } catch {
-    return undefined
-  }
-}
-
 function serializeCookie(name: string, value: string, options: SetCookieOptions) {
   const { path, sameSite, maxAge, expires, secure } = options
 

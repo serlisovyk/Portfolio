@@ -1,4 +1,4 @@
-import { DefaultCookieOptions } from '../utils/types'
+import { DefaultCookieOptions } from '../types'
 
 export const DEFAULT_COOKIE_OPTIONS: DefaultCookieOptions = {
   path: '/',

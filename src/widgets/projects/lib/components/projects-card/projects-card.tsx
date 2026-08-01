@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   } = project
 
   return (
-    <article className="border-outline bg-surface flex h-full flex-col rounded-2xl border p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
+    <article className="border-outline bg-surface flex h-full flex-col rounded-2xl border p-4 shadow-sm transition-[box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:shadow-lg">
       <div className="border-outline/40 bg-surface mb-5 overflow-hidden rounded-xl border">
         <div className="relative aspect-video">
           <Image

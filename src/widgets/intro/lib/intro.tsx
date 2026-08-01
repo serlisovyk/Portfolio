@@ -5,6 +5,7 @@ import Socials from '@/features/socials'
 import TextType from '@/shared/ui/text-type'
 import Button from '@/shared/ui/button'
 import { INTRO_TYPING_TEXTS } from './constants'
+import styles from './intro.module.css'
 
 export default function Intro() {
   const t = useTranslations('common')
@@ -22,7 +23,7 @@ export default function Intro() {
               showCursor={true}
               as="span"
               cursorCharacter="|"
-              className="hero-gradient"
+              className={styles.heroGradient}
             />
           </div>
           <p className="text-muted mb-5 text-lg sm:mb-8 sm:text-xl">

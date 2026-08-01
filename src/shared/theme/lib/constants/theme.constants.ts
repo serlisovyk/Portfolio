@@ -1,11 +1,11 @@
-import { THEMES, Theme } from '../types'
+export const THEME_DARK = 'dark'
 
-export const DEFAULT_THEME: Theme = THEMES.DARK
+export const THEME_LIGHT = 'light'
 
-export const THEME_COOKIE_NAME = 'theme'
-
-export const THEME_COOKIE_MAX_AGE = 60 * 60 * 24 * 365 // 1 year
+export const DEFAULT_THEME = THEME_DARK
 
 export const THEME_STORAGE_KEY = 'theme'
 
-export const THEME_CHANGE_EVENT = 'theme-change'
+export const THEMES = [THEME_LIGHT, THEME_DARK] as const
+
+export type Theme = (typeof THEMES)[number]
