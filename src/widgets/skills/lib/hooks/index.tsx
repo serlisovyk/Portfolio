@@ -1,1 +1,1 @@
-export * from './skills.hooks'
+export * from './skills.hook'
